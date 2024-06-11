@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #F2F2F2;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <!-- 왜 rowspan에서 4를 썼을까? 5를 쓰면 안 되나?-->
+            <td rowspan="4">공급자</td>
+            <td colspan="2">상호</td>
+            <td colspan="3">연세IT</td>
+        </tr>
+        <tr>
+            <td>사업자</td>
+            <td colspan="4">123-45-678</td>
+
+        </tr>
+        <tr>
+            <td>주소</td>
+            <td colspan="4">수원시 장안구</td>
+        </tr>
+        <tr>
+            <td>업종</td>
+            <td colspan="2">교육</td>
+            <td>업태</td>
+            <td>학원</td>
+        </tr>
+    </table>
+</body>
+
+</html>
