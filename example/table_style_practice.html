@@ -7,57 +7,50 @@
     <title>Document</title>
 
     <style>
-        .text-center {
-            text-align: center;
-        }
-
-        #background {
-            background-color: #AAA;
-        }
-
-        th,
-        td {
-            border: 1px solid #ccc;
-            padding: 15px 30px;
-            text-align: left;
-            word-spacing: 10px;
-        }
-
         table {
             border-collapse: collapse;
-            margin: 30px 10px 0px 30px;
-            /*위, 오른쪽, 아래, 왼쪽 */
             width: 400px;
+            margin: 30px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: left;
+            padding: 10px;
+            
+        }
+        tr:nth-child(1) td{
+            text-align: center;
+            background-color: gray;
+        }
+        tr:nth-child(2) td:nth-child(1) {
+            text-align: center;
+        }
+        tr:nth-child(4) td:nth-child(1) {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <table>
-        <colgroup>
-            <col style='width: 40%;'>
-            <col style='width: 60%;'>
-        </colgroup>
         <tr>
-            <td class="text-center" id="background">구분</td>
-            <td class="text-center" colspan="2" id="background">업무</td>
+            <td>구분</td>
+            <td>업무</td>
         </tr>
         <tr>
-            <td class="text-center" rowspan="2">회사</td>
+            <td rowspan="2">회사</td>
             <td>보고서작성</td>
         </tr>
         <tr>
-
             <td>창고정리</td>
         </tr>
         <tr>
-            <td class="text-center"rowspan="2">집</td>
+            <td rowspan="2">집</td>
             <td>화장실청소</td>
         </tr>
         <tr>
-            <td>음쓰버리기</td>
+            <td>쓰레기버리기</td>
         </tr>
-        
 </body>
 
 </html>
