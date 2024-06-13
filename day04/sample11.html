@@ -5,42 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+     -->
     <style>
-        html {
-            font-size: 30px;
-        }
+        /* @font-face {
+            font-family: 'NanumGothic';
+            src: url('.fonts/NanumGothic.eot');
+        } */
 
-        .wrap {
-            font-size: 18px;
-            list-style: none;
+        h2 {
+            text-align: center;
+            font-family: "Nanum Myeongjo", "Nanum Pen Script", cursive;
+            font-style: italic;
         }
-
-        .wrap .font-size-px16 {
-            font-size: 16px;
-        }
-
-        .wrap .font-size-vw1 {
-            font-size: 1vw;
-        }
-
-        .wrap .font-size-vw15 {
-            font-size: 1.5vw;
-        }
-
-        .wrap .font-size-vw25 {
-            font-size: 2.5vw;
-        }
+        .fitalic{font-style: italic;}
+        .funderline{text-decoration: underline;}
+        .fline-through{text-decoration: line-through;}
     </style>
 </head>
 
 <body>
-    <h3><mark>font-size : vw Viewport 너비(창너비)의 상대 크기 설정</mark></h3>
-    <ul class="wrap">
-        <li class="font-size-px16">16px Font Size 폰트 크기 설정</li>
-        <li class="font-size-vw1">1vw Font Size 폰트 크기 설정</li>
-        <li class="font-size-vw15">1.5vw Font Size 폰트 크기 설정</li>
-        <li class="font-size-vw25">2.5vw Font Size 폰트 크기 설정</li>
-    </ul>
+    <h2>font-family(글꼴)</h2>
+    <div id="text-wrap">
+        <p class="text-font1 funderline">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt natus, suscipit harum voluptatem deleniti
+            sit
+            nesciunt doloribus soluta ullam nihil hic iste quae sunt, aperiam cum mollitia libero odit velit!
+        </p>
+        <p class="text-font2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima unde, tempora corrupti impedit, ipsa, dolor
+            atque quidem commodi officiis neque ratione accusantium. Esse magni, in rem earum aperiam eveniet autem.
+        </p>
+    </div>
 </body>
 
 </html>
