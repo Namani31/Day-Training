@@ -5,27 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자 스타일 지정</title>
     <style>
-        div {
+        form input[type="number"] {
+            width: 200px;
+            height: 42px;
+            font-size: 30px;
             text-align: center;
+            border: 1px solid #ccc;
+        }
+        form input:in-range {
+            color: #00c;
+            background-color: yellow
+        }
+        form input[type="number"]:hover {
+            background-color: burlywood;
+        }
+        form input[type="email"] {
+            width: 500px;
+            height: 42px;
+            font-size: 17px;
+            text-align: center;
+            border: 1px solid #ccc;
+            background: yellow;
+        }
+        form input:invalid {
+            color: #c00;
+            background-color: aqua;
+            border: 1px solid #c00;
         }
         div p {
-            color:#333;
-            font-size: 14px;
+            font-size: 16px;
+            text-align: center;
         }
-        div p:first-child {
-            color: #c00;
-            font-size: 20px;
-            background-color: #eee;
+        div p:lang(ko) {
+            color: #09a;
+            font-size: 30px;
         }
     </style>
 </head>
 <body>
-    <div>
-        <p>웹디자이너</p>
-        <p>웹퍼블리셔</p>
-        <p>프론트엔드</p>
-        <p>백엔드</p>
-        <p>풀스택</p>
+    <form action="">
+        <label for="num">근무경력</label>
+        <input type="number" name="num" id="num" min="1" max="10" value="3">
+        <input type="text" name="num2" id="num2" value="3">
+        <input type="email" name="mail" id="mail">
+        <div>
+        <p lang="en">영국</p>
+        <p lang="uk">미국</p>
+        <p lang="ko">대한민국</p>
     </div>
+    </form>
 </body>
 </html>
