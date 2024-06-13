@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        ul{
-            list-style:none;
+        div {
+            text-align: center;
         }
-        ul li{
-            line-height:30px
+        div p{
+            color:#333;
+            font-size: 14px;
         }
-        ul li:empty::after{
-            content: "빈칸입니다.";
-            color:#c00;
+        div p:first-child {
+            color:blue;
+            font-size: 20px;
             background-color: #eee;
         }
     </style>
 </head>
 <body>
-    <ul>
-        <li>연세아이티</li>
-        <li>메가스터디</li>
-        <li>김영편집전문학원</li>
-        <li></li>
-        <li>프론트엔드/백엔드 문선종</li>
-    </ul>
+    <div>
+        <p>김일식</p>
+        <p>김이식</p>
+        <p>김삼식</p>
+        <p>김사식</p>
+        <p>김오식</p>
+    </div>
     
 </body>
 </html>
