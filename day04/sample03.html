@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: red;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: blue
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: green;
+        }
+
+        a:focus {
+            text-decoration: overline;
+            color: yellow;
+            outline: 0;
+        }
+
+        a:active {
+            background-color: #c00;
+            text-decoration: none;
+        }
+
+        #box::before {
+            content: "안녕하세요!!!";
+        }
+
+        #box::after {
+            content: "안녕히 가세요!!!";
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <p><a href="#a1" target="_blank">웹기획</a></p>
+        <p><a href="#a2" target="_blank">웹 스토리보드</a></p>
+        <p><a href="#a3">웹 스토리 텔링</a></p>
+        <p><a href="#a4">웹 디자인</a></p>
+        <p><a href="#a5">웹 포트폴리오</a></p>
+    </div>
+</body>
+
+</html>
