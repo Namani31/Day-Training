@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 15px;
+            color: #333;
+            line-height: 170%;
+            background: #e9e9e9;
+        }
+
+        #wrap {
+            width: 100;
+        }
+
+        #wrap #textBox {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        #wrap #textBox .gap {
+            padding: 0 50px;
+        }
+
+        #wrap #textBox .gap .text-wrap {
+            margin: 30px 0;
+            background: #fff;
+            padding: 0 30px;
+        }
+
+
+        #wrap #textBox .gap .text-wrap h3 {
+            font-size: 20px;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #wrap #textBox .gap .text-wrap p {
+            width: 100%;
+            height: 180px;
+            text-align: justify;
+            padding: 30px 0;
+        }
+
+        #wrap #textBox .gap .text-wrap1 p {
+            writing-mode: vertical-lr;
+            text-align: left;
+        }
+
+        #wrap #textBox .gap .text-wrap2 p {
+            writing-mode: vertical-rl;
+        }
+
+        #wrap #textBox .gap .text-wrap3 p {
+            writing-mode: horizontal-tb;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="textBox">
+            <div class="gap">
+                <div class="text-wrap text-wrap1">
+                    <h3>세로쓰기 writing-mode: verical-lr</h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum ipsa sunt officia tempore
+                        eveniet
+                        atque itaque labore id nobis obcaecati voluptatibus velit vitae rerum, pariatur voluptate
+                        placeat
+                        sequi quia molestiae!</p>
+                </div>
+                <div class="text-wrap text-wrap2">
+                    <h3>세로쓰기 writing-mode: verical-rl</h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum ipsa sunt officia tempore
+                        eveniet
+                        atque itaque labore id nobis obcaecati voluptatibus velit vitae rerum, pariatur voluptate
+                        placeat
+                        sequi quia molestiae!</p>
+                </div>
+                <div class="text-wrap text-wrap3">
+                    <h3>세로쓰기 writing-mode: horizontal-tb</h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum ipsa sunt officia tempore
+                        eveniet
+                        atque itaque labore id nobis obcaecati voluptatibus velit vitae rerum, pariatur voluptate
+                        placeat
+                        sequi quia molestiae!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
