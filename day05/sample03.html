@@ -5,25 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* body {
-            background-color: rgba(0, 0, 255, 0.1) #9af
-        } */
-        #wrap {
-            height: 250px;
-            background-image:url(./img/html5_icon.png),
-                            url(./img/blog-post-img6.jpg);
-            background-repeat: no-repeat, repeat;
-            background-position: 50%, 50%, 0, 0;
+        /* 모든 욧들 마진 0으로 설정 불필요한 여백 0 설정 */
+        * {margin: 0;}
+
+        /* 배경이미지 고정과 스크롤 이용 실전 배치 */
+        #section1 {
+            height: 969px;
+            background: url(./img/blog-post-img1.jpg)
+            no-repeat 50% 0 fixed;
+            background-size: cover;
+        }
+        #section2 {
+            height: 969px;
+            background: url(./img/blog-post-img2.jpg)
+            no-repeat 50% 0 scroll;
+            background-size: cover;
+        }
+        #section3 {
+            height: 969px;
+            background: url(./img/blog-post-img3.jpg)
+            no-repeat 50% 0 fixed;
+            background-size: cover;
+        }
+        #section4 {
+            height: 969px;
+            background: url(./img/blog-post-img4.jpg)
+            no-repeat 50% 0 fixed;
+            background-size: cover;
+        }
+        h3 {
+            text-align: center;
+            line-height: 969px;
+            color: #fff;
+            font-size: 70px;
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <h3>background-image:url(./img/html5_icon.png), url(./img/blog-post-img6.png);
-            두 개의 배경 이미지를 설정합니다.
-            첫 번째 이미지는 반복 없음, 포지션 수평 가운데 수직 가운데 <br>
-            두 번째 이미지는 반복, 포지션 수평 좌측 수직 상단<br>
-        </h3>
+        <section id="section1">
+            <h3>WEB PUBLISHER</h3>
+        </section>
+
+        <section id="section2">
+            <h3>FRONTEND</h3>
+        </section>
+
+        <section id="section3">
+            <h3>BACKEND</h3>
+        </section>
+
+        <section id="section4">
+            <h3>WEB DESIGNER</h3>
+        </section>
+
     </div>
 </body>
 </html>
