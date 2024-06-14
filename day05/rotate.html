@@ -6,28 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #wrap {
+            text-align: center;
+        }
+
+        label,
+        input {
+            display: inline-block;
+            cursor: pointer;
+            transition: all .6s;
+        }
+
+        label:hover {
+            color: #3bf;
+            transform: scale(1.05);
+        }
+
+        /*인라인요소는 인라인 블록요소로 변경하여야 크기 변경 효과가 이루어집니다. */
+
         .box {
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            margin: 50px auto;
+            margin: 100px auto;
             text-align: center;
             line-height: 300px;
-            transition: all 1s;
             background: #3ac;
             color: #fff;
             font-size: 30px;
+            transition: all 1s;
         }
 
-        .box:hover {
-            transform: translate(300px, 0);
+        #matrixDefault:checked~.box {
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        #matrixScale:checked~.box {
+            transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+        }
+
+        #matrixSkew:checked~.box {
+            transform: matrix(1, 1.2, -5, 1, 0, 0);
+        }
+
+        #matrixTranslate:checked~.box {
+            transform: matrix(1, 0, 0, 1, 300, 0);
         }
     </style>
 </head>
 
 <body>
     <div id="wrap">
-        <div class="box">rotateX(180deg)
+        <input type="radio" name="matrix" id="matrixDefault" value="matrixSkew" checked>
+        <label for="matrixDefault">matrixDefault(초기화)</label>
+
+        <input type="radio" name="matrix" id="matrixScale" value="matrixSkew">
+        <label for="matrixScale">matrixScale(줌효과)</label>
+
+        <input type="radio" name="matrix" id="matrixSkew" value="matrixSkew">
+        <label for="matrixSkew">matrixSkew(기울기효과)</label>
+
+        <input type="radio" name="matrix" id="matrixTranslate" value="matrixTranslate">
+        <label for="matrixTranslate">matrixTtanslate</label>
+
+        <div class="box">matrix
+
         </div>
     </div>
 </body>
