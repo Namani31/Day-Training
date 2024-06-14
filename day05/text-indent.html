@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-indent: 양수 들여쓰기 | 음수 내어쓰기</title>
+    <style>
+        #text-box {
+            width: 600px;
+            margin: 0 auto;
+        }
+        #text-box h3 {
+            width: 600px;
+            margin: 0 auto;
+        }
+        #text-box p{
+            color: #444;
+            font-size: 14px;
+        }
+        #text-box p.text-indent1{
+            text-indent: 50px;
+        }
+        #text-box p.text-indent2{
+            text-indent: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="text-box">
+        <h3>text-indent: 양수 50px; 들여쓰기</h3>
+        <p class="text-indent1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quisquam accusamus. Facere nemo illo illum totam dolorem, reprehenderit tempora amet ipsam quod ad id beatae repellat praesentium, delectus facilis ea.
+        </p>
+        <h3>text-indent: 음수 -50px 내어쓰기</h3>
+        <p id="text-indent2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit aliquid officia voluptatibus cupiditate quos enim. Vel laudantium praesentium, incidunt omnis veniam officia facere! Omnis amet repellendus aspernatur accusamus similique?
+        </p>
+    </div>
+</body>
+</html>
