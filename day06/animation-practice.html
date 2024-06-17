@@ -27,6 +27,7 @@
             list-style: none;
             width: 4000px;
             height: 350px;
+            /* 8초동안 사진 4개가 순차적으로 표시 됨 */
             animation: slideAni 8s infinite ease-in-out;
         }
 
@@ -66,6 +67,8 @@
             }
 
             25% {
+                /* -로 되어있으니 왼쪽으로 -1000px만큼 이동
+                    25% 간격으로 슬라이드가 바뀜 */
                 left: -1000px;
             }
 
@@ -97,6 +100,7 @@
 </head>
 
 <body>
+
     <div id="wrap">
         <div class="slide-wrap">
             <ul>
