@@ -5,11 +5,26 @@
 
     <!-- 초기화 -->
     <style>
-        * {margin: 0;padding: 0;}
-        body {font-family: sans-serif;}
-        li {list-style: none;}
-        a {text-decoration: none;}
-        img {border: 0;}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
     </style>
 
     <!-- 헤더 -->
@@ -22,6 +37,7 @@
             height: 120px;
             background-color: aqua;
         }
+
         #title {
             position: absolute;
             left: 20px;
@@ -31,8 +47,9 @@
 
     <!-- 메뉴 1-->
     <style>
-        #main_gnb{
-            overflow: hidden; /*리스트를 가로 -> 세로로 돌리기 위해 사용 */
+        #main_gnb {
+            overflow: hidden;
+            /*리스트를 가로 -> 세로로 돌리기 위해 사용 */
             position: absolute;
             right: 0;
             top: 0;
@@ -54,7 +71,8 @@
         }
 
         #main_gnb>li:first-child>a {
-            border-radius: 10px 0 0 10px; /* 위쪽|오른쪽|아래쪽|왼쪽 */
+            border-radius: 10px 0 0 10px;
+            /* 위쪽|오른쪽|아래쪽|왼쪽 */
         }
 
         #main_gnb>li:last-child>a {
@@ -78,18 +96,20 @@
             border: 1px solid black;
         }
 
-        #main_lnb>li:first-child > a {
+        #main_lnb>li:first-child>a {
             border-radius: 10px 0 0 10px;
         }
-        #main_lnb>li:last-child > a {
+
+        #main_lnb>li:last-child>a {
             border-radius: 0 10px 10px 0;
         }
     </style>
-        
+
     <!-- 본문 -->
     <style>
         #content {
-            width: 960px;;
+            width: 960px;
+            ;
             margin: 0 auto;
             background-color: cadetblue;
             border: 1px solid black;
@@ -115,35 +135,53 @@
     </style>
 
     <!-- 사이드 탭 -->
-     <style>
-        #html {display: none;}
-        #css {display:none;}
-        .buttons > label {border: 1px solid black}
-        .tab_item:nth-of-type(2){display: none;}
-        .tab_item:nth-of-type(3){display: none;}
-        .tab_item {border: 1px solid black;}
+    <style>
+        #html {
+            display: none;
+        }
 
-        #html:checked ~ .tab_item:nth-of-type(2) {
+        #css {
+            display: none;
+        }
+
+        .buttons>label {
+            border: 1px solid black
+        }
+
+        .tab_item:nth-of-type(2) {
+            display: none;
+        }
+
+        .tab_item:nth-of-type(3) {
+            display: none;
+        }
+
+        .tab_item {
+            border: 1px solid black;
+        }
+
+        #html:checked~.tab_item:nth-of-type(2) {
             /* background-color: white;
             color:black; */
             display: block;
         }
-        #css:checked ~ .tab_item:nth-of-type(3)  {
+
+        #css:checked~.tab_item:nth-of-type(3) {
             /* background-color: white;
             color:black; */
             display: block;
         }
 
-        #html:checked ~ .buttons > label:nth-of-type(1) {
+        #html:checked~.buttons>label:nth-of-type(1) {
             background-color: white;
-            color:black;
+            color: black;
         }
 
-        #css:checked ~ .buttons > label:nth-of-type(2)  {
+        #css:checked~.buttons>label:nth-of-type(2) {
             background-color: white;
-            color:black;
+            color: black;
         }
-     </style>
+    </style>
 
     <!-- 푸터 -->
     <style>
@@ -222,7 +260,6 @@
             </div>
         </aside>
     </div>
-    </content>
     <footer>
         <h3>연세IT미래교육원</h3>
         <address>수원시 장안구 영화동</address>
