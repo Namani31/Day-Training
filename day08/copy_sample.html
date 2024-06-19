@@ -35,51 +35,72 @@
             position: relative;
             text-align: center;
         }
-        #main_header > h1 {
+
+        #main_header>h1 {
             color: white;
         }
-        #main_header > a, #main_header > label {
-            display:block;
+
+        #main_header>a,
+        #main_header>label {
+            display: block;
             height: 32px;
-            position: absolute; /* main_header가 relative이므로 main_header가 위치를 잡는 기준이 됨 */
+            position: absolute;
+            /* main_header가 relative이므로 main_header가 위치를 잡는 기준이 됨 */
         }
-        #main_header > a.left {
-            width:62px;
-            left:5px;
+
+        #main_header>a.left {
+            width: 62px;
+            left: 5px;
             top: 7px;
             background: url('./images/sprites.png');
-            text-indent: -99999px; /* -99999px만큼 내어쓰기 */
+            text-indent: -99999px;
+            /* -99999px만큼 내어쓰기 */
         }
     </style>
 
     <!-- 토글 처리 -->
-     <style>
-        #toggle {display:none;}
-        #wrap > #toggle_gnb_wrap{display: none;}
-        #toggle:checked + #wrap>#toggle_gnb_wrap{display:block;}
+    <style>
+        #toggle {
+            display: none;
+        }
+
+        #wrap>#toggle_gnb_wrap {
+            display: none;
+        }
+
+        #toggle:checked+#wrap>#toggle_gnb_wrap {
+            display: block;
+        }
+
         #toggle_gnb_wrap {
             background: #363636;
             padding: 15px
         }
+
         #toggle_gnb {
             background: #fff;
-            padding:5px;
+            padding: 5px;
         }
-        #toggle_gnb > ul{overflow: hidden;}
-        #toggle_gnb > ul > li {
-            width:80px;
+
+        #toggle_gnb>ul {
+            overflow: hidden;
+        }
+
+        #toggle_gnb>ul>li {
+            width: 80px;
             float: left;
         }
-     </style>
-     
-     <!-- 상단 네비 -->
-     <style>
-        #top_gnb { 
+    </style>
+
+    <!-- 상단 네비 -->
+    <style>
+        #top_gnb {
             overflow: hidden;
             background: #842111;
             border-bottom: 1px solid black;
         }
-        #top_gnb > div > a {
+
+        #top_gnb>div>a {
             float: left;
             width: 25%;
             text-align: center;
@@ -87,8 +108,36 @@
             height: 35px;
             line-height: 35px;
         }
+    </style>
+    <!-- 하단 네비 -->
+    <style>
+        #bottom_gnb {
+            display: table;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+        #bottom_gnb > div {
+            display: table-cell;
+            position: relative;
+        }
+        /* 'BOTTOM' 중앙 정렬 */
+        #bottom_gnb > div > a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
 
-     </style>
+        /* BOTTOM 사이에 줄 추가 */
+        #bottom_gnb > div > a::before {
+            display: block;
+            border-left: 1px solid black;
+            content:'';
+            position: absolute;
+            width: 1px; height: 15px;
+            left: -1px; top:10px;
+        }
+    </style>
 
 </head>
 
