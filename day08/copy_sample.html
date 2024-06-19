@@ -57,9 +57,9 @@
             /* -99999px만큼 내어쓰기 */
         }
 
-        #main_header>a.right {
+        #main_header>label.right {
             width: 32px;
-            left: 5px;
+            right: 5px;
             top: 7px;
             background: url('./images/sprites.png');
             background-position: -62px 0px;
@@ -107,7 +107,7 @@
 
     <!-- 상단 네비 -->
     <style>
-         #top_gnb {
+        #top_gnb {
             overflow: hidden;
             background: #842111;
             border-bottom: 1px solid black;
@@ -129,12 +129,14 @@
             width: 100%;
             border-bottom: 1px solid black;
         }
-        #bottom_gnb > div {
+
+        #bottom_gnb>div {
             display: table-cell;
             position: relative;
         }
+
         /* 'BOTTOM' 중앙 정렬 */
-        #bottom_gnb > div > a {
+        #bottom_gnb>div>a {
             display: block;
             height: 35px;
             line-height: 35px;
@@ -142,32 +144,35 @@
         }
 
         /* BOTTOM 사이에 줄 추가 */
-        #bottom_gnb > div > a::before {
+        #bottom_gnb>div>a::before {
             display: block;
             border-left: 1px solid black;
-            content:'';
+            content: '';
             position: absolute;
-            width: 1px; height: 15px;
-            left: -1px; top:10px;
+            width: 1px;
+            height: 15px;
+            left: -1px;
+            top: 10px;
         }
     </style>
     <!-- 본문 -->
-     <style>
+    <style>
         #section_header {
             padding: 20px;
         }
+
         #section_article {
             padding: 10px;
         }
-     </style>
-     <!-- 푸터 -->
-      <style>
+    </style>
+    <!-- 푸터 -->
+    <style>
         #main_footer {
-            padding:10px;
+            padding: 10px;
             border-top: 3px solid black;
             text-align: center;
         }
-      </style>
+    </style>
 </head>
 
 <body>
@@ -181,25 +186,23 @@
         <div id="toggle_gnb_wrap">
             <div id="toggle_gnb">
                 <ul>
-                    <li><a href="#">버튼</a></li>
-                    <li><a href="#">버튼</a></li>
-                    <li><a href="#">버튼</a></li>
-                    <li><a href="#">버튼</a></li>
+                    <div><a href="#">버튼</a></li>
+                        <div><a href="#">버튼</a></li>
+                            <div><a href="#">버튼</a></div>
+                            <div><a href="#">버튼</a></div>
 
-                    <li><a href="#">버튼</a></li>
-                    <li><a href="#">버튼</a></li>
-                    <li><a href="#">버튼</a></li>
-                    <li><a href="#">버튼</a></li>
+                            <li><a href="#">버튼</a></li>
+                            <li><a href="#">버튼</a></li>
+                            <li><a href="#">버튼</a></li>
+                            <li><a href="#">버튼</a></li>
                 </ul>
             </div>
         </div>
         <nav id="top_gnb">
-            <ul>
-                <li><a href="#">TOP</a></li>
-                <li><a href="#">TOP</a></li>
-                <li><a href="#">TOP</a></li>
-                <li><a href="#">TOP</a></li>
-            </ul>
+                <div><a href="#">TOP</a></div>
+                <div><a href="#">TOP</a></div>
+                <div><a href="#">TOP</a></div>
+                <div><a href="#">TOP</a></div>
         </nav>
         <nav id="bottom_gnb">
             <div><a href="#">BOTTOM</a></div>
