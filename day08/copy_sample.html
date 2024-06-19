@@ -56,6 +56,15 @@
             text-indent: -99999px;
             /* -99999px만큼 내어쓰기 */
         }
+
+        #main_header>a.right {
+            width: 32px;
+            left: 5px;
+            top: 7px;
+            background: url('./images/sprites.png');
+            text-indent: -99999px;
+            /* -99999px만큼 내어쓰기 */
+        }
     </style>
 
     <!-- 토글 처리 -->
@@ -73,7 +82,7 @@
         }
 
         #toggle_gnb_wrap {
-            background: #363636;
+            background: #f07167;
             padding: 15px
         }
 
@@ -84,6 +93,9 @@
 
         #toggle_gnb>ul {
             overflow: hidden;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         #toggle_gnb>ul>li {
@@ -94,7 +106,7 @@
 
     <!-- 상단 네비 -->
     <style>
-        #top_gnb {
+         #top_gnb {
             overflow: hidden;
             background: #842111;
             border-bottom: 1px solid black;
@@ -158,7 +170,7 @@
 </head>
 
 <body>
-    <input type="radio" name="" id="">
+    <input type="check" name="" id="toggle">
     <div id="wrap">
         <header id="main_header">
             <a href="#" class="left">Main</a>
