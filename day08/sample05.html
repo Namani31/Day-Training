@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvertica', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <style>
+        #main_header {
+            height: 45px;
+            line-height: 45px;
+
+            background: #f2e8cf;
+            position: relative;
+            text-align: center;
+        }
+
+        #main_header>h1 {
+            color: black;
+        }
+
+        #main_header>a,
+        #main_header>label {
+            display: block;
+            height: 32px;
+            position: absolute;
+        }
+
+        #main_header>a.left {
+            width: 62px;
+            left: 5px;
+            top: 7px;
+            background: url('./images/sprites.png');
+            text-indent: -99999px;
+        }
+
+        #main_header>label.right {
+            width: 32px;
+            right: 5px;
+            top: 7px;
+            background: url('./images/sprites.png');
+            background-position: -62px 0px;
+            text-indent: -999999px;
+        }
+    </style>
+    <!-- 토글처리 -->
+    <style>
+        #toggle {
+            display: none;
+        }
+
+        #wrap>#toggle_gnb_wrap {
+            display: none;
+        }
+
+        #toggle:checked+#wrap>#toggle_gnb_wrap {
+            display: block;
+        }
+
+        #toggle_gnb_wrap {
+            background: #f07167;
+            padding: 15px;
+        }
+
+        #toggle_gnb {
+            background: #fff;
+            padding: 5px;
+        }
+
+        #toggle_gnb>ul {
+            overflow: hidden;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #toggle_gnb>ul>li {
+            width: 80px;
+            float: left;
+        }
+    </style>
+
+    <!-- 상단네비 -->
+    <style>
+        #top_gnb {
+            overflow: hidden;
+            background: #003049;
+            border-bottom: 1px solid black;
+        }
+
+        #top_gnb>div>a {
+            float: left;
+            width: 25%;
+            text-align: center;
+            color: white;
+            height: 35px;
+            line-height: 35px;
+        }
+    </style>
+
+    <!-- 하단 네비 -->
+    <style>
+        #bottom_gnb {
+            display: table;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+
+        #bottom_gnb>div {
+            display: table-cell;
+            position: relative;
+        }
+
+        #bottom_gnb>div>a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        #bottom_gnb>div>a::before {
+            display: block;
+            border-left: 1px solid black;
+            content: ' ';
+            position: absolute;
+            width: 1px;
+            height: 15px;
+            left: -1px;
+            top: 10px;
+        }
+    </style>
+
+    <!-- 본문 -->
+    <style>
+        #section_header {
+            padding: 20px;
+        }
+
+        #section_article {
+            padding: 10px;
+        }
+
+        #main_fotter {
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="toggle">
+    <div id="wrap">
+        <header id="main_header">
+            <a href="#" class="left">Main</a>
+            <h1>Mobile</h1>
+            <label class="right" for="toggle" onclick="">Toggle</label>
+        </header>
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="https://picsum.photos/250/250" target='_blank'>여기를</a></li>
+                    <li><a href="https://picsum.photos/250/250" target='_blank'>눌러</a></li>
+                    <li><a href="https://picsum.photos/250/250" target='_blank'>보세요</a></li>
+                    <li><a href="https://picsum.photos/250/250" target='_blank'>짜잔</a></li>
+
+                    <li><a href="https://picsum.photos/250/250" target='_blank'>뭐가</a></li>
+                    <li><a href="https://picsum.photos/250/250" target='_blank'>들어</a></li>
+                    <li><a href="https://picsum.photos/250/250" target='_blank'>있을</a></li>
+                    <li><a href="https://picsum.photos/250/250" target='_blank'>까요?</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav id="top_gnb">
+            <div><a href="#"></a></div>
+            <div><a href="#">TOP</a></div>
+            <div><a href="#">TOP</a></div>
+            <div><a href="#">TOP</a></div>
+        </nav>
+        <nav id="bottom_gnb">
+            <div><a href="https://www.google.com/">Google</a></div>
+            <div><a href="https://www.naver.com/">Naver</a></div>
+            <div><a href="https://www.daum.net/">Daum</a></div>
+            <div><a href="https://www.youtube.com/">Youtube</a></div>
+            <div><a href="http://www.theuselessweb.com">Random</a></div>
+        </nav>
+        <section id="main_section">
+            <header id="section_header">
+                <h1>나마니 IT</h1>
+                <time>2024-06-19</time>
+            </header>
+
+            <article id="section_article">
+                <p>몰라도 되는 잡지식 1: 쥐는 사실 치즈를 좋아하지 않습니다.</p>
+                <br>
+                <p>몰라도 되는 잡지식 2: 잠이 안 올 떄 양을 세는 이유는 영어의 sleep 과 sheep이 발음이 비슷하기 때문입니다.</p>
+                <br>
+                <p>몰라도 되는 잡지식 3: 필리핀엣ㄴ 한때 요요가 무기였습니다.</p>
+                <br>
+                <p>몰라도 되는 잡지식 4: 4000년 동안 새로 가축이 된 동물은 없습니다.</p>
+                <br>
+            </article>
+        </section>
+
+        <footer id="main_fotter">
+            <h3>나마니 교육원</h3>
+            <address>여기가 어디게요?</address>
+        </footer>
+    </div>
+</body>
+
+</html>
