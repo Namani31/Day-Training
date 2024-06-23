@@ -81,13 +81,16 @@
     <style>
         .list-section {
             position: absolute;
-            line-height: 30px;
+            /* line-height: 30px; */
             top: 28%;
             left: 75%;
         }
 
-        .list>h4 {
+        .align>h4 {
             color: green;
+        }
+        .align>a>h6 {
+            text-align: right;
         }
     </style>
 </head>
@@ -113,15 +116,18 @@
 
         <div class="list-section">
             <div class="list">
-                <h4>특별함</h5>
-                    <a href="#">
-                        <h6>더보기+</h6>
-                    </a>
+                <div class="align">
+                    <h4>특별함</h5>
+                        <a href="#">
+                            <h6>더보기+</h6>
+                        </a>
+                </div>
+
                     <hr>
                     <ul>
-                        <li>Something Special 1</li>
-                        <li>Something Special 2</li>
-                        <li>Something Special 3</li>
+                        <img src="http://placehold.it/45x35"><li>Something Special 1</li>
+                        <img src="http://placehold.it/45x35"><li>Something Special 2</li>
+                        <img src="http://placehold.it/45x35"><li>Something Special 3</li>
                     </ul>
                     <br>
                     <br>
