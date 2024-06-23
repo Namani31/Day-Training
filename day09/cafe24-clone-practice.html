@@ -36,8 +36,6 @@
 
         img {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
         }
     </style>
 
@@ -79,11 +77,23 @@
 
     <!-- 특별함, 인근여행지 목록 -->
     <style>
+        .list1,
+        .list2 {
+            width: 100%;
+        }
+
         .list-section {
             position: absolute;
             /* line-height: 30px; */
             top: 20%;
             left: 65%;
+        }
+
+        .align {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
         }
 
         .align>h4 {
@@ -92,6 +102,12 @@
 
         .align>a>h6 {
             text-align: right;
+        }
+
+        .list-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -116,12 +132,12 @@
         </div>
 
         <div class="list-section">
-            <div class="list">
+            <div class="list1">
                 <div class="align">
-                    <h4>특별함</h5>
-                        <a href="#">
-                            <h6>더보기+</h6>
-                        </a>
+                    <h4>특별함</h4>
+                    <a href="#">
+                        <h6>더보기+</h6>
+                    </a>
                 </div>
                 <hr>
                 <ul>
@@ -154,7 +170,7 @@
                 <br>
             </div>
 
-            <div class="list">
+            <div class="list2">
                 <div class="align">
                     <h4>인근여행지</h4>
                     <a href="#">
@@ -163,7 +179,6 @@
                 </div>
                 <hr>
                 <ul>
-
                     <div class="list-detail">
                         <img src="http://placehold.it/45x35">
                         <b>
@@ -181,17 +196,15 @@
                     </div>
 
                     <div class="list-detail">
-                        <div class="photo">
-                            <img src="http://placehold.it/45x35">
-                        </div>
+                        <img src="http://placehold.it/45x35">
                         <b>
                             <li>Hot Place 3</li>
                         </b>
                         <p>2024-06-23</p>
                     </div>
-                    <br>
-                    <br>
                 </ul>
+                <br>
+                <br>
             </div>
         </div>
     </section>
