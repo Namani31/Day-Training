@@ -18,6 +18,8 @@
 
         li {
             list-style: none;
+            font-weight: bold;
+
         }
 
         a {
@@ -36,6 +38,8 @@
 
         img {
             display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 
@@ -44,7 +48,7 @@
         .main-section {
             margin: 0 auto;
             position: relative;
-            width: 1200px;
+            width: 1000px;
             height: 650px;
             background: white;
         }
@@ -85,8 +89,8 @@
         .list-section {
             position: absolute;
             /* line-height: 30px; */
-            top: 20%;
-            left: 65%;
+            top: 25%;
+            left: 67%;
         }
 
         .align {
@@ -108,6 +112,16 @@
             display: flex;
             align-items: center;
             margin-bottom: 10px;
+            word-spacing: 5px;
+        }
+
+        .tumbnail {
+            padding-top: 5px;
+            padding-right: 10px;
+        }
+
+        .content-title-date {
+            padding-top: 5px;
         }
     </style>
 </head>
@@ -142,29 +156,34 @@
                 <hr>
                 <ul>
                     <div class="list-detail">
-                        <img src="http://placehold.it/45x35">
-                        <b>
-                            <li>Something Special 1</li>
-                        </b>
-                        <p>2024-06-23</p>
+                        <img class="tumbnail " src="http://placehold.it/45x35">
+                        <div class="content-title-date">
+                            <a href="#">
+                                <li>Something Special 1</li>
+                            </a>
+                            <p>2024-06-23</p>
+                        </div>
                     </div>
 
                     <div class="list-detail">
-                        <img src="http://placehold.it/45x35">
-                        <b>
-                            <li>Something Special 2</li>
-                        </b>
-                        <p>2024-06-23</p>
+                        <img class="tumbnail" src="http://placehold.it/45x35">
+                        <div class="content-title-date">
+                            <a href="#">
+                                <li>Something Special 2</li>
+                            </a>
+                            <p>2024-06-23</p>
+                        </div>
                     </div>
 
                     <div class="list-detail">
-                        <img src="http://placehold.it/45x35">
-                        <b>
-                            <li>Something Special 2</li>
-                        </b>
-                        <p>2024-06-23</p>
+                        <img class="tumbnail" src="http://placehold.it/45x35">
+                        <div class="content-title-date">
+                            <a href="#">
+                                <li>Something Special 2</li>
+                            </a>
+                            <p>2024-06-23</p>
+                        </div>
                     </div>
-
                 </ul>
                 <br>
                 <br>
@@ -180,32 +199,40 @@
                 <hr>
                 <ul>
                     <div class="list-detail">
-                        <img src="http://placehold.it/45x35">
-                        <b>
-                            <li>Hot Place 1</li>
-                        </b>
-                        <p>2024-06-23</p>
+                        <img class="tumbnail" src="http://placehold.it/45x35">
+                        <div class="content-title-date">
+                            <a href="#">
+                                <li>Hot Place 1</li>
+                            </a>
+                            <p>2024-06-23</p>
+                        </div>
                     </div>
-
-                    <div class="list-detail">
-                        <img src="http://placehold.it/45x35">
-                        <b>
-                            <li>Hot Place 2</li>
-                        </b>
-                        <p>2024-06-23</p>
-                    </div>
-
-                    <div class="list-detail">
-                        <img src="http://placehold.it/45x35">
-                        <b>
-                            <li>Hot Place 3</li>
-                        </b>
-                        <p>2024-06-23</p>
-                    </div>
-                </ul>
-                <br>
-                <br>
             </div>
+
+            <div class="list-detail">
+                <img class="tumbnail" src="http://placehold.it/45x35">
+                <div class="content-title-date"></a>
+                    <a href="#">
+                        <li>Hot Place 2</li>
+                    </a>
+                    <p>2024-06-23</p>
+                </div>
+            </div>
+
+            <div class="list-detail">
+                <img class="tumbnail" src="http://placehold.it/45x35">
+                <div class="content-title-date">
+                    <a href="#">
+                        <li>Hot Place 3</li>
+                    </a>
+                    <p>2024-06-23</p>
+                </div>
+            </div>
+        </div>
+        </ul>
+        <br>
+        <br>
+        </div>
         </div>
     </section>
 </body>
