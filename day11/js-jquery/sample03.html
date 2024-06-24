@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function writeln(text){
+        function writeln(...texts) {
             const logDiv = document.getElementById('log');
-            // 새 로그 항목을 생성합니다.
+            // 여러 텍스트 인자를 각각 처리합니다.
+            texts.forEach(text => {
+                const newLogEntry = document.createElement('div');
+                newLogEntry.textContent = text;
+                logDiv.appendChild(newLogEntry);
+            });
+        }
+
+        function writeln2(...texts) {
+            const logDiv = document.getElementById('log');
             const newLogEntry = document.createElement('div');
-            newLogEntry.textContent = text; // 로그 항목에 텍스트를 설정합니다.
-            logDiv.appendChild(newLogEntry); // 로그 div에 새 로그 항목을 추가합니다.
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
         }
     </script>
 </head>
+
 <body>
     <div id="log"></div>
     <script>
@@ -24,19 +36,42 @@
         // 숫자 맨 앞 못 오는 경우가 많음
         let _num;
         // 카멜, 파스칼, 케밥, 스네이크
-        let goodMan;    // 카멜: 함수/변수
-        let GoodMan;    // 파스칼: 클래스 이름
-        let good_man;   // 스네이크: 필드명
+        let goodMan; // 카멜: 함수/변수
+        let GoodMan; // 파스칼: 클래스 이름
+        let good_man; // 스네이크: 필드명
         // let good-man;   // 케밥: 사용자 정의 태그
 
         // 변수 만들기
-        let num01;
-        num01 = 5;
-        writeln(num01); // writeln(): 출력문
-        let num02 = 10;
-        writeln(num02);
+        // let num01;
+        // num01 = 5;
+        // writeln(num01); // writeln(): 출력문
+        // let num02 = 10;
+        // writeln(num02);
+        // writeln(num01 + num02);
 
-        writeln(num01 + num02);
+        // let sum01, sum02, sum03;
+        // sum01 = 3;
+        // sum02 = 5;
+        // sum03 = '설악산';
+        // writeln2(sum01, sum02, sum03)
+
+        // let num01 = 3,
+        //     num02 = 5,
+        //     num03 = "라벤더";
+        // writeln2(num01 + num02, num03);
+        // writeln2(num03 + sum03);
+        // writeln2(sum03 + sum02);
+        // writeln2("3" + 3);
+
+        let sum01 = 123;
+        sum01 = 234;
+        writeln(sum01);
+        console.log(sum01);
+
+        sum01 = 456;
+        writeln(sum01);
+        console.log(sum01);
     </script>
 </body>
+
 </html>
