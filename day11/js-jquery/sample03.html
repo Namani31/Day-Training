@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function writeln(text){
+            const logDiv = document.getElementById('log');
+            // 새 로그 항목을 생성합니다.
+            const newLogEntry = document.createElement('div');
+            newLogEntry.textContent = text; // 로그 항목에 텍스트를 설정합니다.
+            logDiv.appendChild(newLogEntry); // 로그 div에 새 로그 항목을 추가합니다.
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        writeln("강아지");
+        writeln(3+4);
+    </script>
+</body>
+</html>
