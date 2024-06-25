@@ -41,26 +41,46 @@
         // }
         // log("종료");
 
-        let score = 85;
-        if (score >= 90) {
-            log("A학점");
-        } else if (score >= 80) {
-            log("B학점");
-        } else if (score >= 70) {
-            log("C학점");
-        } else if (score >= 60) {
-            log("D학점");
-        } else {
-            log("F학점");
-        }
-        log("종료");
-        
+        // let score = 85;
+        // if (score >= 90) {
+        //     log("A학점");
+        // } else if (score >= 80) {
+        //     log("B학점");
+        // } else if (score >= 70) {
+        //     log("C학점");
+        // } else if (score >= 60) {
+        //     log("D학점");
+        // } else {
+        //     log("F학점");
+        // }
+        // log("종료");
+
         // let score = 50;
         // if(score > 60) {
         //     log('합격');
         // }else {
         //     log('불합격');
         // }
+
+        let score = 95;
+        switch (parseInt(score / 10)) {
+            case 10:
+            case 9:
+                log("A학점");
+                break;
+            case 8:
+                log("B학점");
+                break;
+            case 7:
+                log("C학점");
+                break;
+            case 6:
+                log("D학점");
+                break;
+            default:
+                log("F학점");
+                break;
+        }
     </script>
 </body>
 
