@@ -139,21 +139,36 @@
         // // 결과 출력하기
         // log('로그인 결과는 :', result);
 
-        let classA = prompt('소프트웨어 설계 점수? ');
-        let classB = prompt('소프트웨어 개발 점수? ');
-        let classC = prompt('프로그램 언어 활용 점수? ');
-        let classD = prompt('정보시스템 구축 관리 점수? ');
+        // let classA = prompt('소프트웨어 설계 점수? ');
+        // let classB = prompt('소프트웨어 개발 점수? ');
+        // let classC = prompt('프로그램 언어 활용 점수? ');
+        // let classD = prompt('정보시스템 구축 관리 점수? ');
 
-        // 평균 60 과락 40
-        let resultA = (Number(classA) >= 40);
-        let resultB = (Number(classB) >= 40);
-        let resultC = (Number(classC) >= 40);
-        let resultD = (Number(classD) >= 40);
+        // // 평균 60 과락 40
+        // let resultA = (Number(classA) >= 40);
+        // let resultB = (Number(classB) >= 40);
+        // let resultC = (Number(classC) >= 40);
+        // let resultD = (Number(classD) >= 40);
 
-        let total = ((Number(classA)) + (Number(classB)) + (Number(classC)) + (Number(classD)));
-        let avg = (total / 4) >= 60;
+        // let total = ((Number(classA)) + (Number(classB)) + (Number(classC)) + (Number(classD)));
+        // let avg = (total / 4) >= 60;
 
-        log("합격: ", resultA && resultB && resultC && resultD && avg);
+        // log("합격: ", resultA && resultB && resultC && resultD && avg);
+
+        /* 나이가 20세 이상 대출 가능
+             자산이 100원 이상은 50원까지 대출 가능
+            200원 이상은 100원까지 대출 가능
+            prompt로 나이, 자산, 희망대출금액 입력 받아서 대출 승인 여부 판단하기
+        */
+
+        let age = prompt('나이: ');
+        let asset = prompt('자산: ');
+        let loan = prompt('희망대출금액: ');
+
+        let permit1 = (Number(age)) >= 20 && (Number(asset) >= 100 && (Number(loan) <= 50));
+        let permit2 = (Number(age)) >= 20 && (Number(asset) >= 200 && (Number(loan) <= 100));
+
+        log("대출승인: ", permit1 || permit2);
     </script>
 </body>
 
