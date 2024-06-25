@@ -79,23 +79,37 @@
         // console.log(3+3+'5'+3+5);   // 6535
 
         // 비교연산자
-        let a = 20;
-        let b = 10;
-        let c = '10';
+        // let a = 20;
+        // let b = 10;
+        // let c = '10';
 
-        log(a > b); // true
-        log(c > b); // false
-        log(c >= b); // true
-        log(b == c); // true
-        log(b === c); //false
-        log(b != c); // false
-        log(b !== c); //true
+        // log(a > b); // true
+        // log(c > b); // false
+        // log(c >= b); // true
+        // log(b == c); // true
+        // log(b === c); //false
+        // log(b != c); // false
+        // log(b !== c); //true
 
-        console.log('a가 b보다 크다: '. a > b);
-        console.log('a가 b보다 작다: '. a < b);
-        console.log('b가 c와 같다: .', b == c);
-        console.log('b하고 c가 내용과 형식이 같다: ', b === c);
-        console.log('b하고 c가 내용이 같다'. b !== c);
+        // console.log('a가 b보다 크다: '. a > b);
+        // console.log('a가 b보다 작다: '. a < b);
+        // console.log('b가 c와 같다: .', b == c);
+        // console.log('b하고 c가 내용과 형식이 같다: ', b === c);
+        // console.log('b하고 c가 내용이 같다'. b !== c);
+
+        // 논리 연산자
+        let id = 'main';
+        let pwd = '1234';
+
+        let userId = 'main';
+        let userPwd = '123';
+
+        let result = (id == userId) && (pwd === userPwd);
+        log(result);
+
+        log(id === 'main' && pwd === '5678');
+        log(id === 'main' || pwd === '5678');
+        log(!(id === 'main' || pwd == '5678'));
     </script>
 </body>
 
