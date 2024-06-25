@@ -161,17 +161,25 @@
             prompt로 나이, 자산, 희망대출금액 입력 받아서 대출 승인 여부 판단하기
         */
 
-        let age = prompt('나이: ');
-        let asset = prompt('자산: ');
-        let loan = prompt('희망대출금액: ');
+        // let age = prompt('나이: ');
+        // let asset = prompt('자산: ');
+        // let loan = prompt('희망대출금액: ');
 
-        let permit1 = (Number(age)) >= 20 && (Number(asset) >= 100 && (Number(loan) <= 50));
-        let permit2 = (Number(age)) >= 20 && (Number(asset) >= 200 && (Number(loan) <= 100));
+        // let permit1 = (Number(age)) >= 20 && (Number(asset) >= 100 && (Number(loan) <= 50));
+        // let permit2 = (Number(age)) >= 20 && (Number(asset) >= 200 && (Number(loan) <= 100));
 
-        log("대출승인: ", permit1 || permit2);
+        // log("대출승인: ", permit1 || permit2);
 
-        let result = (permit1||permit2) ? "가능" : "불가능";
-        (permit1||permit2) ? log("대출 가능") : log("대출 불가능");
+        // let result = (permit1||permit2) ? "가능" : "불가능";
+        // (permit1||permit2) ? log("대출 가능") : log("대출 불가능");
+
+        // 삼항연산자
+        var i = 30;
+        var j = 15;
+
+        // 조건연산자
+        var c =(i < j) ? 'i가 j보다 작다.' : 'i가 j보다 크다.'; // 30 < 15 -> false 값 출력
+        log(c);
     </script>
 </body>
 
