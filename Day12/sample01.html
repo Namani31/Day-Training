@@ -98,18 +98,32 @@
         // console.log('b하고 c가 내용이 같다'. b !== c);
 
         // 논리 연산자
-        let id = 'main';
-        let pwd = '1234';
+        // let id = 'main';
+        // let pwd = '1234';
 
-        let userId = 'main';
-        let userPwd = '123';
+        // let userId = 'main';
+        // let userPwd = '123';
 
-        let result = (id == userId) && (pwd === userPwd);
-        log(result);
+        // let result = (id == userId) && (pwd === userPwd);
+        // log(result);
 
-        log(id === 'main' && pwd === '5678');
-        log(id === 'main' || pwd === '5678');
-        log(!(id === 'main' || pwd == '5678'));
+        // log(id === 'main' && pwd === '5678');
+        // log(id === 'main' || pwd === '5678');
+        // log(!(id === 'main' || pwd == '5678'));
+
+        // 저장된 id, 패스워드값 선언하기
+        var ID = 'main';
+        var PW = 'A0123';
+
+        // 사용자 id, 패스워드값 선언하기
+        var userId = 'main';
+        var userPw = 'A0123';
+
+        // 결과를 알아보기 위한 and 논리식 만들기
+        var result = (ID === userId) && (PW === userPw); // id -> true && pw -> true
+
+        // 결과 출력하기
+        log('로그인 결과는 :', result);
     </script>
 </body>
 
