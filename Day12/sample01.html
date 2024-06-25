@@ -111,19 +111,49 @@
         // log(id === 'main' || pwd === '5678');
         // log(!(id === 'main' || pwd == '5678'));
 
-        // 저장된 id, 패스워드값 선언하기
-        var ID = 'main';
-        var PW = 'A0123';
+        // // 저장된 id, 패스워드값 선언하기
+        // var ID = 'main';
+        // var PW = 'A0123';
 
         // 사용자 id, 패스워드값 선언하기
-        var userId = 'main';
-        var userPw = 'A0123';
+        // var userId = 'main';
+        // var userPw = 'A0123';
 
-        // 결과를 알아보기 위한 and 논리식 만들기
-        var result = (ID === userId) && (PW === userPw); // id -> true && pw -> true
+        // /결과를 알아보기 위한 and 논리식 만들기
+        // var result = (ID === userId) && (PW === userPw); // id -> true && pw -> true
 
-        // 결과 출력하기
-        log('로그인 결과는 :', result);
+        // // 결과 출력하기
+        // log('로그인 결과는 :', result);
+
+        // 저장된 id, 패스워드값 선언하기
+        // var ID = 'main';
+        // var PW = 'A0123';
+
+        // //사용자 id, 패스워드값 선언하기
+        // var userId = prompt('아이디를 입력하세요');
+        // var userPw = prompt('패스워드를 입력하세요');
+
+        // // 결과를 알아보기 위한 and 논리식 만들기
+        // var result = (ID === userId) && (PW === userPw);
+
+        // // 결과 출력하기
+        // log('로그인 결과는 :', result);
+
+        let classA = prompt('소프트웨어 설계 점수? ');
+        let classB = prompt('소프트웨어 개발 점수? ');
+        let classC = prompt('프로그램 언어 활용 점수? ');
+        let classD = prompt('정보시스템 구축 관리 점수? ');
+
+        // 평균 60 과락 40
+        let resultA = (Number(classA) >= 40);
+        let resultB = (Number(classB) >= 40);
+        let resultC = (Number(classC) >= 40);
+        let resultD = (Number(classD) >= 40);
+
+        let total = ((Number(classA)) + (Number(classB)) + (Number(classC)) + (Number(classD)));
+        let avg = (total / 4) >= 60;
+
+        log("합격: ", resultA && resultB && resultC && resultD && avg);
     </script>
 </body>
 
