@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function log(...texts){
+        function log(...texts) {
             const logDiv = document.getElementById('log');
             const newLogEntry = document.createElement('div');
             // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
@@ -14,6 +15,7 @@
         }
     </script>
 </head>
+
 <body>
     <div id="log"></div>
     <script>
@@ -29,49 +31,72 @@
         // log(num20 / num03);
         // log(num10 % num03);
 
-    //     // 대입 연산자, 복합대입연산자
-    //     let sum01 = 10;
-    //     log(sum01);
+        //     // 대입 연산자, 복합대입연산자
+        //     let sum01 = 10;
+        //     log(sum01);
 
-    //     sum01 += 5;
-    //     log(sum01);
-        
-    //     sum01 -= 5;
-    //     log(sum01);
-        
-    //     sum01 *= 5;
-    //     log(sum01);
+        //     sum01 += 5;
+        //     log(sum01);
 
-    //     sum01 /= 5;
-    //     log(sum01);
+        //     sum01 -= 5;
+        //     log(sum01);
 
-    //     sum01 %= 5;
-    //     log(sum01);
+        //     sum01 *= 5;
+        //     log(sum01);
 
-    // 증감 연산자
-    // let a= 10;
-    // let b, y;
-    // let x = 10;
+        //     sum01 /= 5;
+        //     log(sum01);
 
-    // b = a++; // a: 11, b: 10
-    // log(a, b);
+        //     sum01 %= 5;
+        //     log(sum01);
 
-    // y = ++x; // x:11 y:11
-    // log(x, y);
+        // 증감 연산자
+        // let a= 10;
+        // let b, y;
+        // let x = 10;
 
-    // 결합 연산자
-    // log(3+4);
-    // log("고양"+"이");
-    // log(2+"마리");
-    // log(2+3+"마리");
-    // log("고양이" + 2 + 3 + "마리");
+        // b = a++; // a: 11, b: 10
+        // log(a, b);
 
-    // 연결 연산자
-    console.log(5+3); // 8
-    console.log('설악산' + '한라산'); // 설악산 한라산
-    console.log('설악산' + 5);  //  설악산5
-    console.log(3+3+'5'+3+5);   // 6535
+        // y = ++x; // x:11 y:11
+        // log(x, y);
 
+        // 결합 연산자
+        // log(3+4);
+        // log("고양"+"이");
+        // log(2+"마리");
+        // log(2+3+"마리");
+        // log("고양이" + 2 + 3 + "마리");
+
+        // let num1 = 2;
+        // let num2 = 3;
+        // log(`고양이 ${num1 + num2}마리`);
+
+        // 연결 연산자
+        // console.log(5+3); // 8
+        // console.log('설악산' + '한라산'); // 설악산 한라산
+        // console.log('설악산' + 5);  //  설악산5
+        // console.log(3+3+'5'+3+5);   // 6535
+
+        // 비교연산자
+        let a = 20;
+        let b = 10;
+        let c = '10';
+
+        log(a > b); // true
+        log(c > b); // false
+        log(c >= b); // true
+        log(b == c); // true
+        log(b === c); //false
+        log(b != c); // false
+        log(b !== c); //true
+
+        console.log('a가 b보다 크다: '. a > b);
+        console.log('a가 b보다 작다: '. a < b);
+        console.log('b가 c와 같다: .', b == c);
+        console.log('b하고 c가 내용과 형식이 같다: ', b === c);
+        console.log('b하고 c가 내용이 같다'. b !== c);
     </script>
 </body>
+
 </html>
