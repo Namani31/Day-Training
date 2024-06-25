@@ -169,6 +169,9 @@
         let permit2 = (Number(age)) >= 20 && (Number(asset) >= 200 && (Number(loan) <= 100));
 
         log("대출승인: ", permit1 || permit2);
+
+        let result = (permit1||permit2) ? "가능" : "불가능";
+        (permit1||permit2) ? log("대출 가능") : log("대출 불가능");
     </script>
 </body>
 
