@@ -135,16 +135,29 @@
         // }
 
         // 숫자가 있으면 단 단위만 합하기 (예: 1,2,3 있으면 6, 1,3,5 있으면 9 만들기)
-        
-        var userInput = (prompt("3자리 숫자 입력하세요: "));
-        for(let loop = 0; loop < 1; loop++) {
-            let digit1 = Number(userInput % 10); //1의 자리 구하기
-            let digit10 = Math.floor((userInput / 10) % 10); // 10의 자리 구하기
-            let digit100 = Math.floor((userInput / 100) % 10); // 100의 자리 구하기
-            log(digit1 + digit10 + digit100);
+
+        // var userInput = (prompt("3자리 숫자 입력하세요: "));
+        // for(let loop = 0; loop < 1; loop++) {
+        //     let digit1 = Number(userInput % 10); //1의 자리 구하기
+        //     let digit10 = Math.floor((userInput / 10) % 10); // 10의 자리 구하기
+        //     let digit100 = Math.floor((userInput / 100) % 10); // 100의 자리 구하기
+        //     log(digit1 + digit10 + digit100);
+        // }
+
+        let i = 314923;
+        num = i * 10;
+        let count = 0;
+
+        while (true) {
+            num = parseInt(num / 10);
+            if ((num % 10) % 3 == 0) {
+                count++;
+            }
+            if(num < 10) {
+                break;
+            }
         }
-        
-        
+        log(count);
     </script>
 </body>
 
