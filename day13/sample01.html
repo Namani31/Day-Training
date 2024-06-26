@@ -86,17 +86,65 @@
         //     month++;
         //     log(money);
         // }
-        
+
         // for(let i = 2; i <= 10; i += 2) {
         //     log(i);
         // }
 
-        for(let i= 1; i <= 10; i++) {
-            if(i % 2 == 1) {
-                continue;   // 홀수일 경우 패스
-            }
-            log(i)  // 짝수만 출력
+        // for(let i= 1; i <= 10; i++) {
+        //     if(i % 2 == 1) {
+        //         continue;   // 홀수일 경우 패스
+        //     }
+        //     log(i)  // 짝수만 출력
+        // }
+
+        // for(let i = 1; i <= 10; i++) {
+        //     if(i % 3 ==0) {
+        //         continue;
+        //     }
+        //     log(i);
+        // }
+
+        // for(let i = 1; i <= 10; i++) {
+        //     if(i%3 != 0) {
+        //         log(i);
+        //     }
+        // }
+
+        // for(let dan = 2; dan <= 9; dan++) {
+        //     for(let n = 2; n <= 9; n++) {
+        //         log(dan, "*", n, "=", dan*n);
+        //     }
+        // }
+
+
+        // for문 1개로 구구단 만들기
+        // let dan = 2;
+        // for (let n = 2; n <= 9 && dan <= 9; n++) {
+        //     log(dan, "*", n, "=", dan * n);
+        //     if (n >= 9) {
+        //         dan++;
+        //         n = 2;
+        //     }
+        // }
+
+        // for(let n = 1; n < 81; n++) {
+        //     let dan = parseInt(i / 9) + 1;  // 몫 구해서 단 구하기
+        //     let n = i % 9; + 1; // 나머지 구해서 곱할 수 구하기
+        //     log(dan, "*", n, "=", dan*n);
+        // }
+
+        // 숫자가 있으면 단 단위만 합하기 (예: 1,2,3 있으면 6, 1,3,5 있으면 9 만들기)
+        
+        var userInput = (prompt("3자리 숫자 입력하세요: "));
+        for(let loop = 0; loop < 1; loop++) {
+            let digit1 = Number(userInput % 10); //1의 자리 구하기
+            let digit10 = Math.floor((userInput / 10) % 10); // 10의 자리 구하기
+            let digit100 = Math.floor((userInput / 100) % 10); // 100의 자리 구하기
+            log(digit1 + digit10 + digit100);
         }
+        
+        
     </script>
 </body>
 
