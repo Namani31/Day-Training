@@ -144,16 +144,16 @@
         //     log(digit1 + digit10 + digit100);
         // }
 
-        let i = 314923;
-        num = i * 10;
+        let i = 31031591026;
+        num = i * 10; // 밑에서 나올 자릿수 때문에 * 10을 함
         let count = 0;
 
         while (true) {
             num = parseInt(num / 10);
-            if ((num % 10) % 3 == 0) {
+            if ((num % 10) == 3  || (num % 10) == 6 || (num % 10) == 9) {
                 count++;
             }
-            if(num < 10) {
+            if (num < 10) {
                 break;
             }
         }
