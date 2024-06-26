@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function log(...texts) {
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+
+    <!-- <style>
+        div{
+            white-space: pre; /* 연속된 공백과 줄바꿈을 그대로 표시 */
+        } -->
+    <!-- </style> -->
+</head>
+
+<body>
+    <div id="log"></div>
+    <script>
+        // let money = 100;
+        // for(let i = 1; i <= 12; i++) {
+        //     log(money);
+        //     money *= 1.01;
+        // }
+        // log(money);
+
+        // for(let i = 2; i <= 9; i++) {
+        //     log("2 *", i, "=", 2 * i);
+        // }
+
+        // for(let dan = 2; dan <= 4; dan++) {
+        //     for (let n = 2; n <= 9; n++) {
+        //         log(dan, "*", n, "=", dan * n);            }
+        // }
+
+        // for(let line = 1; line <= 5; line++) {
+        //     let strStar = "";
+        //     for(let star = 5; star >= line; star--) {
+        //         strStar += "*";
+        //     }
+        //     log(strStar);
+        // }
+
+        // for(let line = 0; line < 5; line++) {
+        //     let strStar = "";
+        //     for(let star = 5; star > line; star--) {
+        //         strStar += "*";
+        //     }
+        //     log(strStar);
+        // }
+
+        // for(let line = 0; line  < 5; line++) {
+        //     let strStar = "";
+        //     for(let blank = 4; blank > line; blank--) {
+        //         strStar += " ";
+        //     }
+
+        //     for(let star = 0; star <= line; star++) {
+        //         strStar += "*";
+        //     }
+        //     log(strStar);
+        // }
+
+        // let num = 1;
+        // let sum = 0;
+
+        // while(num <= 10) {
+        //     sum += num;
+        //     num++;    
+        // }
+        // log(sum);
+
+        // 100만원 이자를 12개월간 1%의 복리 이자를 받는다고 친다면 얼마를 받을까?
+        // let money = 1000000;
+        // let month = 1;
+        // while (month <= 12) {
+        //     money *= 1.01;
+        //     month++;
+        //     log(money);
+        // }
+        
+        // for(let i = 2; i <= 10; i += 2) {
+        //     log(i);
+        // }
+
+        for(let i= 1; i <= 10; i++) {
+            if(i % 2 == 1) {
+                continue;   // 홀수일 경우 패스
+            }
+            log(i)  // 짝수만 출력
+        }
+    </script>
+</body>
+
+</html>
