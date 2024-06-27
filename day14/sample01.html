@@ -272,14 +272,20 @@
         // main(3, 5)
 
 
-        const main2 = a => {
-            return a * 2 // 출력: 10
-        }
+        // const main2 = a => {
+        //     return a * 2 // 출력: 10
+        // }
 
-        // 실행문이 return 문이면서 한 줄인 경우, `{}`와 `return` 생략 가능
-        const main2_1 = a => a * 2
-        document.write(main2(5))
+        // // 실행문이 return 문이면서 한 줄인 경우, `{}`와 `return` 생략 가능
+        // const main2_1 = a => a * 2
+        // document.write(main2(5))
         
+
+        // const main3 = a => {return {b:a}}
+
+        // 실행문 한 줄이면서 객체를 return 할 경우에 return은 생략하지만, return 되는 객체는 `()`로 감싸야 한다.
+        const main3_1 = a => ({b:a})
+        document.write(main3_1(25))
     </script>
 
     <!-- <button type="button" onclick="flower('무궁화')">무궁화</button>
