@@ -41,15 +41,8 @@
         //     }
         // }
 
-        // function displayDan(dan) {
-        //     for (let n = 2; n < 10; n++) {
-        //         document.write(dan, "*", n, "=", dan * n, "<br>");
-        //     }
-        //     for (let dan = 2; dan < 10; dan++) {
-        //         displayDan(dan);
-        //     }
-        // }
-
+/
+        
         //     *
         //    **
         //   ***
@@ -173,7 +166,7 @@
         //     result = a > b ? console.log('a > b') : console.log('a < b');
         //     return result;
         // }
-        
+
         // 익명 함수
         // let first = 13;
         // let last = 7;
@@ -187,19 +180,44 @@
         // console.log(all);
 
         // 람다 함수
-        const max = (a,b) => a>b ? a : b;
-        // document.write(max(5, 6));
+        // const max = (a,b) => a>b ? a : b;
+        // // document.write(max(5, 6));
 
-        // 위 람다 함수를 기명 함수로 사용할 경우
-        function maxFunc(a, b) {
-            let result = a > b ? a : b;
-            return;
-        }
+        // // 위 람다 함수를 기명 함수로 사용할 경우
+        // function maxFunc(a, b) {
+        //     let result = a > b ? a : b;
+        //     return;
+        // }
 
-        document.write(max(15, 6));
+        // document.write(max(15, 6));
 
         // all(23, 45);
         // all(1 / 2, 3 / 4);
+
+        const max = (a, b) => a > b ? a : b;
+        const min = (a, b) => a < b ? a : b;
+        // sort 함수: 주어진 배열을 max 함수를 사용하여 내림차순으로 정렬하는 함수
+        const sort = (arr, method) => {
+            // 선택 정렬(selection sort)을 사용하여 정렬
+            const n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                let maxIndex = i;
+                for (let j = i + 1; j < n; j++) {
+                    if (method(arr[j], arr[maxIndex]) === arr[j]) {
+                        maxIndex = j;
+                    }
+                }
+                if (maxIndex !== i) {
+                    [arr[i], arr[maxIndex]] = [arr[maxIndex], arr[i]];
+                }
+            }
+            return arr;
+        };
+        // 예제 배열
+        const numbers = [5, 3, 8, 1, 2, 7, 4, 6];
+        // 배열 정렬 (내림차순)
+        const sortedNumbers = sort(numbers, max); // max 대신 min을 넣으면 오름차순이 됨
+        document.write("Sorted :", sortedNumbers);
     </script>
 
     <!-- <button type="button" onclick="flower('무궁화')">무궁화</button>
