@@ -284,8 +284,10 @@
         // const main3 = a => {return {b:a}}
 
         // 실행문 한 줄이면서 객체를 return 할 경우에 return은 생략하지만, return 되는 객체는 `()`로 감싸야 한다.
-        const main3_1 = a => ({b:a})
-        document.write(main3_1(25))
+        // a가 변수 값, b가 변수 이름, main3가 개체이므로 document.write(main3(25).b); 로 사용하면 된다.
+        // 클래스 지역 변수처럼 사용하면 되는데, json 파일처럼 {b:a}가 비슷하게 되어있다.
+        // const main3=a=>({b:a})
+        // console.log(main3(25));
     </script>
 
     <!-- <button type="button" onclick="flower('무궁화')">무궁화</button>
