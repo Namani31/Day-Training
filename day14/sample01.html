@@ -229,17 +229,24 @@
         
         // 익명 함수
         // 변수 선언
-        var first = 5;
-        var last = 7;
+        // var first = 5;
+        // var last = 7;
         
-        // 함수식 시작하기
-        var all = (function(a, b) {
-            var result;
-            a > b ? result = 'a가 크다' : result = 'b가 크다';
-            return result;
-        }) (first, last) // 인수
-        // 출력하기
-        document.write(all);
+        // // 함수식 시작하기
+        // var all = (function(a, b) {
+        //     var result;
+        //     a > b ? result = 'a가 크다' : result = 'b가 크다';
+        //     return result;
+        // }) (first, last) // 인수
+        // // 출력하기
+        // document.write(all);
+
+        // 매개변수가 없는 람다 함수
+        // 매개변수가 없을 경우, () 생략 불가
+        const main1 = () => {
+            document.write('main1');
+        }
+        main1();
     </script>
 
     <!-- <button type="button" onclick="flower('무궁화')">무궁화</button>
