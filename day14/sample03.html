@@ -17,9 +17,18 @@
         document.write("년자:",today.getFullYear(), "<br>");
         document.write("월자:",today.getDate(), "<br>");
         document.write("일자:",today.getMonth()+1, "<br>");
-        document.write("일자:",today.getTime(), "<br>");
+        document.write("초:",today.getTime(), "<br>");
 
-        
+        let day1 = new Date('2024,6,27 14:00:00');
+        let day2 = new Date('2024,6,27 15:02:03');
+        let toDiff  = day2- day1;
+        document.write(toDiff,"<br>");
+        document.write(
+        `
+        ${Math.floor(toDiff % (1000*60*60*24)/(1000*60*60))}시
+        ${Math.floor(toDiff % (1000*60*60)/(1000*60))}분
+        ${Math.floor(toDiff % (1000*60)/(1000))}초
+        `)
     </script>
 </body>
 </html>
