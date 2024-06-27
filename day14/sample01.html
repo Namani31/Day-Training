@@ -226,12 +226,12 @@
         //     return result;
         // }
         // document.write(all(7, 10));
-        
+
         // 익명 함수
         // 변수 선언
         // var first = 5;
         // var last = 7;
-        
+
         // // 함수식 시작하기
         // var all = (function(a, b) {
         //     var result;
@@ -243,10 +243,17 @@
 
         // 매개변수가 없는 람다 함수
         // 매개변수가 없을 경우, () 생략 불가
-        const main1 = () => {
-            document.write('main1');
+        //     const main1 = () => {
+        //         document.write('main1');
+        //     }
+        //     main1();
+
+        // 매개변수가 1개인 람다식
+        // 매개변수가 1개인 경우 () 생략 가능
+        const main2 = a => {
+            document.write(a)
         }
-        main1();
+        main2('welcome');
     </script>
 
     <!-- <button type="button" onclick="flower('무궁화')">무궁화</button>
