@@ -175,16 +175,22 @@
         // }
         
         // 익명 함수
-        let first = 13;
-        let last = 7;
-        var all = function (a, b) {
-            let result;
-            a > b ? document.write('a > b') : document.write('a < b');
-            result = a>b? 'a>b' : 'a<b';
-            return result;
-        }(first, last);
+        // let first = 13;
+        // let last = 7;
+        // var all = function (a, b) {
+        //     let result;
+        //     a > b ? document.write('a > b') : document.write('a < b');
+        //     result = a>b? 'a>b' : 'a<b';
+        //     return result;
+        // }(first, last);
 
-        console.log(all);
+        // console.log(all);
+
+        // 람다 함수
+        const max = (a,b) => a>b ? a : b;
+        document.write(max(5, 6));
+
+
         // all(23, 45);
         // all(1 / 2, 3 / 4);
     </script>
