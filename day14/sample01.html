@@ -250,10 +250,17 @@
 
         // 매개변수가 1개인 람다식
         // 매개변수가 1개인 경우 () 생략 가능
-        const main2 = a => {
-            document.write(a)
+        // const main2 = a => {
+        //     document.write(a)
+        // }
+        // main2('welcome');
+
+        // 매개변수가 여러 개인 람다식
+        // 매개변수인 () 생략하지 않음
+        const main3 = (a, b) => {
+            document.write(a + b)
         }
-        main2('welcome');
+        main3(5, 10);
     </script>
 
     <!-- <button type="button" onclick="flower('무궁화')">무궁화</button>
