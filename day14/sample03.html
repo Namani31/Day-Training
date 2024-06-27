@@ -79,8 +79,8 @@
         stars.push("박지성");
         stars.push("윤코지");
         stars.unshift("김내루미");
-        stars.shift();
-        stars.pop();
+        // stars.shift();
+        // stars.pop();
         stars.push("아이유");
         stars.push("현빈");
         stars.push("강호동");
@@ -103,11 +103,18 @@
         // });
 
         // stars.reverse();
-        stars.sort((b, a) => a > b ? 1 : (a < b ? -1 : 0));
+        // stars.sort((b, a) => a > b ? 1 : (a < b ? -1 : 0));
 
 
-        for (let i = 0; i < stars.length; i++) {
-            writeln(i, stars[i]);
+        // for (let i = 0; i < stars.length; i++) {
+        //     writeln(i, stars[i]);
+        // }
+
+        writeln("-------------");
+        superStars = stars.slice(0, 3);
+
+        for(let i = 0; i < superStars.length; i++) {
+            writeln(i, superStars[i]);
         }
     </script>
 </body>
