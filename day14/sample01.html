@@ -188,8 +188,15 @@
 
         // 람다 함수
         const max = (a,b) => a>b ? a : b;
-        document.write(max(5, 6));
+        // document.write(max(5, 6));
 
+        // 위 람다 함수를 기명 함수로 사용할 경우
+        function maxFunc(a, b) {
+            let result = a > b ? a : b;
+            return;
+        }
+
+        document.write(max(15, 6));
 
         // all(23, 45);
         // all(1 / 2, 3 / 4);
