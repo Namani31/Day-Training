@@ -86,11 +86,11 @@
         stars.push("강호동");
 
 
-        for (let i = 0; i < stars.length; i++) {
-            writeln(i, stars[i]);
-        }
-        strbuffer = stars.join("&");
-        writeln(strbuffer);
+        // for (let i = 0; i < stars.length; i++) {
+        //     writeln(i, stars[i]);
+        // }
+        // strbuffer = stars.join("&");
+        // writeln(strbuffer);
 
         // stars.sort(function (b, a) {
         //     if (a > b) {
@@ -110,11 +110,23 @@
         //     writeln(i, stars[i]);
         // }
 
-        writeln("-------------");
-        superStars = stars.slice(0, 3);
+        // writeln("-------------");
+        // // superStars = stars.slice(0, 3);
 
-        for(let i = 0; i < superStars.length; i++) {
-            writeln(i, superStars[i]);
+        // // for (let i = 0; i < superStars.length; i++) {
+        // //     writeln(i, superStars[i]);
+        // // }
+
+        // stars.forEach(
+        //     function(item, index, array) {
+        //         writeln(index, item);
+        //     }
+        // )
+
+        // for... of 반복문
+        let idx = 0;
+        for(item of stars) {
+            writeln(idx++, item);
         }
     </script>
 </body>
