@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function writeln(str) {
+            document.writeln(str, "<br>");
+        }
+    </script>
 </head>
+
 <body>
     <script>
         // let today = new Date();
@@ -31,24 +38,43 @@
         // `)
 
         // 숫자 객체
-        document.write("절대값:",Math.abs(-23), "<br>"); // 절대값 -> 23
-        document.write("몇승:",Math.pow(2,3), "<br>"); // 지수, 승수 -> 8
-        document.write("제곱근:",Math.sqrt(2), "<br>"); // 제곱근
-        document.write("올림:",Math.ceil(2.3), "<br>"); // 올림 -> 3
-        document.write("반올림:",Math.round(2.3), "<br>"); // 반올림 -> 2
-        document.write("내림:",Math.floor(2.3), "<br>"); // 내림
-        document.write("큰값:",Math.max(2,3), "<br>"); // 최대 값 찾기
-        document.write("큰값:",Math.min(2,3), "<br>"); // 최소 값 찾기
-        document.write("랜덤:",Math.random(), "<br>"); // 무작위 값
+        // document.write("절대값:",Math.abs(-23), "<br>"); // 절대값 -> 23
+        // document.write("몇승:",Math.pow(2,3), "<br>"); // 지수, 승수 -> 8
+        // document.write("제곱근:",Math.sqrt(2), "<br>"); // 제곱근
+        // document.write("올림:",Math.ceil(2.3), "<br>"); // 올림 -> 3
+        // document.write("반올림:",Math.round(2.3), "<br>"); // 반올림 -> 2
+        // document.write("내림:",Math.floor(2.3), "<br>"); // 내림
+        // document.write("큰값:",Math.max(2,3), "<br>"); // 최대 값 찾기
+        // document.write("큰값:",Math.min(2,3), "<br>"); // 최소 값 찾기
+        // document.write("랜덤:",Math.random(), "<br>"); // 무작위 값
 
-        /* 
-            1. 현재 Math.random()은 0~7.999999... 의 값만 나온다.
-            2. 만약 뽑힌 값이 7.426 라고 할 경우, Math.floor로 인해 소수점을 버린다.
-            3. 7만 남은 상태에서 +10을 더하면 17이 된다.
-            4. 만약 0이 뽑혔다해도 +10을 만나기 때문에 10이 된다. (최소값)
-        */
-        let dice = Math.floor(Math.random() * 8) + 10;
-        document.write("주사위: ", dice)
+        // /* 
+        //     1. 현재 Math.random()은 0~7.999999... 의 값만 나온다.
+        //     2. 만약 뽑힌 값이 7.426 라고 할 경우, Math.floor로 인해 소수점을 버린다.
+        //     3. 7만 남은 상태에서 +10을 더하면 17이 된다.
+        //     4. 만약 0이 뽑혔다해도 +10을 만나기 때문에 10이 된다. (최소값)
+        // */
+        // let dice = Math.floor(Math.random() * 8) + 10;
+        // document.write("주사위: ", dice)
+
+        // 배열 객체
+        var pen = new Array(4);
+        pen[0] = "red";
+        pen[1] = "green";
+        pen[2] = "blue";
+        pen[3] = "orange";
+        pen[4] = "yellow";
+
+        pen.unshift("sky"); // 배열 시작점에 값 추가
+
+        writeln(pen, "<br>");
+        writeln(pen[2]);
+        writeln("-----------");
+
+        for (let i = 0; i < pen.length; i++) {
+            writeln(pen[i]);
+        }
     </script>
 </body>
+
 </html>
