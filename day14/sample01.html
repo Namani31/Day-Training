@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+
+    <script>
+        function log(...texts) {
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'd2coding';
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // function addNum(num1, num2) {
+        //     let sum = num1 + num2;
+        //     return sum;
+        // }
+        // let sum1 = addNum(1, 2);
+        // document.writeln(sum1, "<br>");
+        // document.writeln(addNum(3, 4));
+
+        // function writeSum(num1, num2) {
+        //     document.write(num1 + num2);
+        // }
+        // writeSum(3, 4);
+
+        // for(let dan = 2; dan < 10; dan++) {
+        //     for(let n = 2; n < 10; n++) {
+        //         document.write(dan, "*", n, "=", dan * n, "<br>");
+        //     }
+        // }
+
+        // function displayDan(dan) {
+        //     for (let n = 2; n < 10; n++) {
+        //         document.write(dan, "*", n, "=", dan * n, "<br>");
+        //     }
+        //     for (let dan = 2; dan < 10; dan++) {
+        //         displayDan(dan);
+        //     }
+        // }
+
+        //     *
+        //    **
+        //   ***
+        //  ****
+        // *****
+
+        function writeBlank(count) {
+            for (let i = 0; i < count; i++) {
+                document.write("&nbsp;");
+            }
+        }
+
+        function writeStar(count) {
+            for (let i = 0; i < count; i++) {
+                document.write("*");
+            }
+        }
+
+        
+        for (let n = 4, s = 1; n > 0 & s < 6; n--, s++) {
+            writeBlank(s);
+            writeStar(n);
+            // document.write("<br>");
+
+            writeBlank(n);
+            writeStar(s);
+            document.write("<br>");
+        }
+
+        for (let n = 4, s = 1; n > 0 & s < 6; n--, s++) {
+            writeStar(n);
+            writeBlank(s);
+            // document.write("<br>");
+
+            writeStar(s);
+            writeBlank(n);
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>
