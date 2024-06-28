@@ -73,9 +73,14 @@
         // console.log(main);
 
         // 02. tag 이름으로 요소 찾기
-        const sub = document.getElementsByTagName('a');
-        sub[4].innerHTML = "홍길동";
-        console.log(sub);
+        // const sub = document.getElementsByTagName('a');
+        // sub[4].innerHTML = "홍길동";
+        // console.log(sub);
+
+        // 03. css 선택을 사용해서 요소 찾기 ----------
+        const ele_css = document.querySelector('#skill > dl');
+        console.log(ele_css);
+        ele_css.style.backgroundColor='skyblue';
     </script>
 </body>
 
