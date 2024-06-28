@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .dog{background-color: brown;}
+        .cat{background-color: orange;}
+        .cat2{color: blue;}
+    </style>
 </head>
 
 <body>
@@ -82,15 +87,25 @@
         // console.log(ele_css);
         // ele_css.style.backgroundColor='skyblue';
 
-        const se02 = document.querySelectorAll('nav > ul > li > a');
-        se02.forEach(link => {
-            link.innerHTML = 'hello';
-        });
+        // const se02 = document.querySelectorAll('nav > ul > li > a');
+        // se02.forEach(link => {
+        //     link.innerHTML = 'hello';
+        // });
 
-        const se03 = document.querySelectorAll('nav > ul > li > a')[2];
-        console.log(se03);
-        se03.innerHTML = 'oh';
-        
+        // const se03 = document.querySelectorAll('nav > ul > li > a')[2];
+        // console.log(se03);
+        // se03.innerHTML = 'oh';
+
+        // 04. 클래스(classList) 이용하기
+        let ele_a = document.getElementsByTagName('a');
+        for (ele of ele_a) {
+            ele.classList.remove('cat');
+            // ele.classList.add('dog');
+            // ele.classList.add('cat2');
+        }
+
+        document.querySelector('nav>ul>li:nth-child(1)').classList.add('sub');
+        document.querySelector('nav>ul>li:nth-child(2)').classList.remove('num02');
     </script>
 </body>
 
