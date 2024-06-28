@@ -78,9 +78,19 @@
         // console.log(sub);
 
         // 03. css 선택을 사용해서 요소 찾기 ----------
-        const ele_css = document.querySelector('#skill > dl');
-        console.log(ele_css);
-        ele_css.style.backgroundColor='skyblue';
+        // const ele_css = document.querySelector('#skill > dl');
+        // console.log(ele_css);
+        // ele_css.style.backgroundColor='skyblue';
+
+        const se02 = document.querySelectorAll('nav > ul > li > a');
+        se02.forEach(link => {
+            link.innerHTML = 'hello';
+        });
+
+        const se03 = document.querySelectorAll('nav > ul > li > a')[2];
+        console.log(se03);
+        se03.innerHTML = 'oh';
+        
     </script>
 </body>
 
