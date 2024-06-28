@@ -32,28 +32,58 @@
     </script>
     <script>
         // 02. Picture 객체를 클래스로 만들기------
+        // class Picture {
+        //     constructor(aTitle, aImgAddr, aAuthor, aYear) {
+        //         this.title = aTitle;
+        //         this.imgAddr = aImgAddr;
+        //         this.author = aAuthor;
+        //         this.year = aYear;
+        //     }
+        // show() {
+        //     document.write(
+        //         `<dl><dt>${this.title}</dt>
+        //         <dd><img src="${this.imgAddr}"></dd>
+        //         <dd>${this.author}(${this.year})</dd>
+        //         </dl>`
+        //     );
+        // }
+        // }
+        // new Picture('에펠탑의 신랑신부', './images/pic01.jpg', '샤갈', 1864).show();
+        // new Picture('꿈', './images/pic02.jpg', '피카소', 1865).show();
+        // new Picture('무용실', './images/pic03.jpg', '샤드가', 1866).show();
+        // new Picture('피아노 치는 소녀들', './images/pic04.jpg', '르누아르', 1867).show();
+    </script>
+    <script>
+        // 02-1. 배열로 만들어서 출력하기
+
         class Picture {
-            constructor(aTitle, aImgAddr, aAuthor, aYear) {
-                this.title = aTitle;
-                this.imgAddr = aImgAddr;
-                this.author = aAuthor;
-                this.year = aYear;
+            constructor(title, imgAddr, author, year) {
+                this.title = title;
+                this.imgAddr = imgAddr;
+                this.author = author;
+                this.year = year;
             }
             show() {
                 document.write(
-                    `<dl><dt>${this.title}</dt>
-                    <dd><img src="${this.imgAddr}"></dd>
-                    <dd>${this.author}(${this.year})</dd>
-                    </dl>`
-                );
+                    `<dl><dt>${this.title}</dt><dd><img src="${this.imgAddr}"></dd><dd>${this.author}${this.year}</dd></dl>`
+                    );
             }
         }
-        new Picture('에펠탑의 신랑신부', './images/pic01.jpg', '샤갈', 1864).show();
-        new Picture('꿈', './images/pic02.jpg', '피카소', 1865).show();
-        new Picture('무용실', './images/pic03.jpg', '샤드가', 1866).show();
-        new Picture('피아노 치는 소녀들', './images/pic04.jpg', '르누아르', 1867).show();
+
+        let arrPicture = new Array(); // 배열 생성
+
+        // 배열에 Picture 삽입
+        arrPicture.push(new Picture('에펠탑의 신랑신부', './images/pic01.jpg', '샤갈', 1864));
+        arrPicture.push(new Picture('꿈', './images/pic02.jpg', '피카소', 1865));
+        arrPicture.push(new Picture('무용실', './images/pic03.jpg', '드가', 1866));
+        arrPicture.push(new Picture('피아노 치는 소녀들', './images/pic04.jpg', '르누아르', 1867));
+
+        // for문 조건식 -i 가 배열의 길이보다 작을 때까지 반복
+        for (let i = 0; i < arrPicture.length; i++) {
+            arrPicture[i].show();
+        }
     </script>
-    
+
 </body>
 
 </html>
