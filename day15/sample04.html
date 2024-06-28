@@ -69,8 +69,13 @@
     </div>
     <script>
         // 01. id로 요소 찾기
-        const main = document.getElementById("skill");
-        console.log(main);
+        // const main = document.getElementById("skill");
+        // console.log(main);
+
+        // 02. tag 이름으로 요소 찾기
+        const sub = document.getElementsByTagName('a');
+        sub[4].innerHTML = "홍길동";
+        console.log(sub);
     </script>
 </body>
 
