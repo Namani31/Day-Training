@@ -121,36 +121,70 @@
     </script>
     <script>
         //9차 new object이용해서 속성과 기능이 포함된 객체 만들고 배열로 사용하기
+        // let Pictures = new Array();
+        // let Picture1 = new Object();
+        // Picture1.title = '에펠탑의 신랑신부';
+        // Picture1.imgAddr = './images/pic01.jpg';
+        // Picture1.show = function () {
+        //     document.write('<dl><dt>', Picture1.title, '</dt><dd><img src="',
+        //         Picture1.imgAddr, '"></dd></dl>');
+        // }
+        // Pictures.push(Picture1);
+        // let Picture2 = new Object();
+        // Picture2.title = '꿈';
+        // Picture2.imgAddr = './images/pic02.jpg';
+        // Picture2.show = function () {
+        //     document.write('<dl><dt>', Picture2.title, '</dt><dd><img src="',
+        //         Picture2.imgAddr, '"></dd></dl>');
+        // }
+        // Pictures.push(Picture2);
+        // let Picture3 = new Object();
+        // Picture3.title = '무용실';
+        // Picture3.imgAddr = './images/pic03.jpg';
+        // Picture3.show = function () {
+        //     document.write('<dl><dt>', Picture3.title, '</dt><dd><img src="',
+        //         Picture3.imgAddr, '"></dd></dl>');
+        // }
+        // Pictures.push(Picture3);
+        // for (let i = 0; i < 3; i++) {
+        //     Pictures[i].show();
+        // }
+    </script>
+    <script>
+        //10차 리터럴 이용해서 속성과 기능이 포함된 객체 만들고 배열로 사용하기
         let Pictures = new Array();
-        let Picture1 = new Object();
-        Picture1.title = '에펠탑의 신랑신부';
-        Picture1.imgAddr = './images/pic01.jpg';
-        Picture1.show = function () {
-            document.write('<dl><dt>', Picture1.title, '</dt><dd><img src="',
-                Picture1.imgAddr, '"></dd></dl>');
+        let Picture1 = {
+            title: '에펠탑의 신랑신부',
+            imgAddr: './images/pic01.jpg',
+            show: function () {
+                document.write('<dl><dt>', this.title, '</dt><dd><img src="',
+                    this.imgAddr, '"></dd></dl>');
+            }
         }
         Pictures.push(Picture1);
-        let Picture2 = new Object();
-        Picture2.title = '꿈';
-        Picture2.imgAddr = './images/pic02.jpg';
-        Picture2.show = function () {
-            document.write('<dl><dt>', Picture2.title, '</dt><dd><img src="',
-                Picture2.imgAddr, '"></dd></dl>');
+        Picture2 = {
+            title: '꿈',
+            imgAddr: './images/pic02.jpg',
+            show: function () {
+                document.write('<dl><dt>', this.title, '</dt><dd><img src="',
+                    this.imgAddr, '"></dd></dl>');
+            }
         }
         Pictures.push(Picture2);
-        let Picture3 = new Object();
-        Picture3.title = '무용실';
-        Picture3.imgAddr = './images/pic03.jpg';
-        Picture3.show = function () {
-            document.write('<dl><dt>', Picture3.title, '</dt><dd><img src="',
-                Picture3.imgAddr, '"></dd></dl>');
+        Picture3 = {
+            title: '무용실',
+            imgAddr: './images/pic03.jpg',
+            show: function () {
+                document.write('<dl><dt>', this.title, '</dt><dd><img src="',
+                    this.imgAddr, '"></dd></dl>');
+            }
         }
         Pictures.push(Picture3);
         for (let i = 0; i < 3; i++) {
             Pictures[i].show();
         }
     </script>
-    
+    </script>
 </body>
 
 </html>
