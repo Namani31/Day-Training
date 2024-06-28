@@ -57,20 +57,20 @@
         // 02-1. 배열로 만들어서 출력하기
 
         class Picture {
-            constructor(title, imgAddr, author, year) {
-                this.title = title;
-                this.imgAddr = imgAddr;
-                this.author = author;
-                this.year = year;
+            constructor(aTitle, aImgAddr, aAuthor, aYear) {
+                this.aTitle = aTitle;
+                this.aImgAddr = aImgAddr;
+                this.aAuthor = aAuthor;
+                this.aYear = aYear;
             }
             show() {
                 document.write(
-                    `<dl><dt>${this.title}</dt><dd><img src="${this.imgAddr}"></dd><dd>${this.author}${this.year}</dd></dl>`
-                    );
+                    `<dl><dt>${this.aTitle}</dt><dd><img src="${this.aImgAddr}"></dd><dd>${this.aAuthor} ${this.aYear}</dd></dl>`
+                );
             }
         }
 
-        let arrPicture = new Array(); // 배열 생성
+        let arrPicture = []; // 배열 생성
 
         // 배열에 Picture 삽입
         arrPicture.push(new Picture('에펠탑의 신랑신부', './images/pic01.jpg', '샤갈', 1864));
