@@ -24,25 +24,33 @@
         // document.write('<dl><dt>', title, '</dt><dd><img src="', imgAddr, '" alt=""></dd></dl>')
     </script>
     <script>
-        //4차 자바스크립트로 변수를 배열에 넣어서 사용하기
-        let titles = new Array();
-        let imgAddrs = new Array();
+        // //4차 자바스크립트로 변수를 배열에 넣어서 사용하기
+        // let titles = new Array();
+        // let imgAddrs = new Array();
 
-        titles.push('에펠탑의 신랑신부');
-        titles.push('꿈');
-        titles.push('무용실');
-        titles.push('피아노치는 노녀들');
+        // titles.push('에펠탑의 신랑신부');
+        // titles.push('꿈');
+        // titles.push('무용실');
+        // titles.push('피아노치는 노녀들');
 
-        imgAddrs.push('./images/pic01.jpg');
-        imgAddrs.push('./images/pic02.jpg');
-        imgAddrs.push('./images/pic03.jpg');
-        imgAddrs.push('./images/pic04.jpg');
+        // imgAddrs.push('./images/pic01.jpg');
+        // imgAddrs.push('./images/pic02.jpg');
+        // imgAddrs.push('./images/pic03.jpg');
+        // imgAddrs.push('./images/pic04.jpg');
 
-        for (let i = 0; i < 4; i++) {
-            document.write('<dl><dt>', titles[i], '</dt><dd><img src="',
-                imgAddrs[i],'"></dd></dl>');
-        }
+        // for (let i = 0; i < 4; i++) {
+        //     document.write('<dl><dt>', titles[i], '</dt><dd><img src="',
+        //         imgAddrs[i],'"></dd></dl>');
+        // }
     </script>
+    <script>
+        //5차 new object 이용해서 객체 만들기
+        let Picture = new Object();
+        Picture.title = '에펠탑의 신랑신부';
+        Picture.imgAddr = './images/pic01.jpg';
+        document.write('<dl><dt>', Picture.title, '</dt><dd><img src="', Picture.imgAddr, '"></dd></dl>')
+    </script>
+
 </body>
 
 </html>
