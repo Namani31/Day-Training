@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 03. 객체표현식
+        const num = {
+            'brand name' : 'MyBrand',
+            level: 2,
+            'born-year': 2022,
+            'born-1': 2021,
+            'born-2': 2022,
+            'born-3': 2023,
+            'born-4': 2024,
+            isVeryNice : true,
+            '1stName' : 'javascript',
+            bestCourse : {
+                title : '프론트엔드',
+                language: 'javascript',
+                'level num' : 1
+            },
+            name:[1, 2, 3, 4, 5]
+        }
+        document.write(num.level, '<br>') // 출력: 2
+        document.write(num['brand name'], '<br>') // 출력: MyBrand
+        document.write(num['1stName'], '<br>') // 출력: javascript
+        document.write(num['born' + '-' + 'year'], '<br>') // 출력: 2022
+        document.write(num.bestCourse.title, '<br>') // 출력: 프론트엔드
+        document.write(num.bestCourse['level num'], '<br>') // 출력: 1
+        document.write(num.name[2], '<br>') // 출력: 3
+        
+    </script>
+    
+</body>
+</html>
