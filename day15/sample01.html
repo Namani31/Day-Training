@@ -52,20 +52,46 @@
     </script>
     <script>
         //6차 new object이용해서 객체 만들고 배열로 사용하기
+        // let Pictures = new Array();
+        // let Picture = new Object();
+        // Picture.title = '에펠탑의 신랑신부';
+        // Picture.imgAddr = './images/pic01.jpg';
+        // Pictures.push(Picture);
+
+        // Picture = new Object();
+        // Picture.title = '꿈';
+        // Picture.imgAddr = './images/pic02.jpg';
+        // Pictures.push(Picture);
+
+        // Picture = new Object();
+        // Picture.title = '무용실';
+        // Picture.imgAddr = './images/pic03.jpg';
+        // Pictures.push(Picture);
+
+        // for (let i = 0; i < 3; i++) {
+        //     document.write('<dl><dt>', Pictures[i].title, '</dt><dd><img src="',
+        //         Pictures[i].imgAddr, '"></dd></dl>');
+        // }
+    </script>
+    <script>
+        // 7차 리터럴 이용해서 객체 만들고 배열로 사용하기
         let Pictures = new Array();
-        let Picture = new Object();
-        Picture.title = '에펠탑의 신랑신부';
-        Picture.imgAddr = './images/pic01.jpg';
+        let Picture = {
+            title: '에펠탑의 신랑신부',
+            imgAddr: './images/pic01.jpg'
+        }
         Pictures.push(Picture);
 
-        Picture = new Object();
-        Picture.title = '꿈';
-        Picture.imgAddr = './images/pic02.jpg';
+        Picture = {
+            title: '꿈',
+            imgAddr: './images/pic02.jpg'
+        }
         Pictures.push(Picture);
 
-        Picture = new Object();
-        Picture.title = '무용실';
-        Picture.imgAddr = './images/pic03.jpg';
+        Picture = {
+            title: '무용실',
+            imgAddr: './images/pic03.jpg'
+        }
         Pictures.push(Picture);
 
         for (let i = 0; i < 3; i++) {
