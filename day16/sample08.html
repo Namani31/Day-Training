@@ -44,91 +44,48 @@
         let boxLeft = 0;
         let boxTop = 200;
         let mvTimer;
-        let leftFlag = false;
-        let rightFlag = false;
-        let upFlag = false;
-        let downFlag = false;
+        let direction = null;
 
         function stopMove() {
             clearInterval(mvTimer);
-            leftFlag = false;
-            rightFlag = false;
-            upFlag = false;
-            downFlag = false;
+            direction = null;
         }
 
-        function leftMove() {
-            boxLeft -= 1;
-            boxEle.style.left = boxLeft + 'px';
-        }
-
-        function playLeft() {
-            if (rightFlag || upFlag || downFlag) {
-                stopMove();
+        function moveBox() {
+            switch (direction) {
+                case 'left':
+                    boxLeft -= 1;
+                    boxEle.style.left = boxLeft + 'px';
+                    break;
+                case 'right':
+                    boxLeft += 1;
+                    boxEle.style.left = boxLeft + 'px';
+                    break;
+                case 'up':
+                    boxTop -= 1;
+                    boxEle.style.top = boxTop + 'px';
+                    break;
+                case 'down':
+                    boxTop += 1;
+                    boxEle.style.top = boxTop + 'px';
+                    break;
             }
-            if (!leftFlag) {
-                mvTimer = setInterval(leftMove, 20);
-                leftFlag = true;
+        }
+
+        function playMove(newDirection) {
+            if (direction !== newDirection) {
+                stopMove();
+                direction = newDirection;
+                mvTimer = setInterval(moveBox, 20);
             } else {
                 stopMove();
             }
         }
 
-        function rightMove() {
-            boxLeft += 1;
-            boxEle.style.left = boxLeft + 'px';
-        }
-
-        function playRight() {
-            if (leftFlag || upFlag || downFlag) {
-                stopMove();
-            }
-            if (!rightFlag) {
-                mvTimer = setInterval(rightMove, 20);
-                rightFlag = true;
-            } else {
-                stopMove();
-            }
-        }
-
-        function upMove() {
-            boxTop -= 1;
-            boxEle.style.top = boxTop + 'px';
-        }
-
-        function playUp() {
-            if (downFlag || leftFlag || rightFlag) {
-                stopMove();
-            }
-            if (!upFlag) {
-                mvTimer = setInterval(upMove, 20);
-                upFlag = true;
-            } else {
-                stopMove();
-            }
-        }
-
-        function downMove() {
-            boxTop += 1;
-            boxEle.style.top = boxTop + 'px';
-        }
-
-        function playDown() {
-            if (upFlag || leftFlag || rightFlag) {
-                stopMove();
-            }
-            if (!downFlag || upFlag) {
-                mvTimer = setInterval(downMove, 20);
-                downFlag = true;
-            } else {
-                stopMove();
-            }
-        }
-
-        btnLeft.addEventListener('click', playLeft);
-        btnRight.addEventListener('click', playRight);
-        btnUp.addEventListener('click', playUp);
-        btnDown.addEventListener('click', playDown);
+        btnLeft.addEventListener('click', () => playMove('left'));
+        btnRight.addEventListener('click', () => playMove('right'));
+        btnUp.addEventListener('click', () => playMove('up'));
+        btnDown.addEventListener('click', () => playMove('down'));
     </script>
 </body>
 
