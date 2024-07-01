@@ -40,18 +40,55 @@
             let boxEle = document.querySelector("#box");
             let boxLeft = 0;
             let boxRight = 0;
+            let mvTimer;
+            let leftFlag = false;
+            let rightFlag = false;
+            let upFlag = false;
+            let downFlag = false;
+
+            function stopMove() {
+                clearInterval(mvTimer);
+                leftFlag = false;
+                rightFlag = false;
+            }
 
             function leftMove() {
-                boxLeft -= 10;
+                boxLeft -= 1;
                 boxEle.style.left = boxLeft + 'px';
+            }
+
+            function playLeft() {
+                if (rightFlag) {
+                    clearInterval(mvTimer);
+                    rightFlag = false;
+                }
+                if (!leftFlag) {
+                    mvTimer = setInterval(leftMove, 20);
+                    leftFlag = true;
+                } else {
+                    stopMove();
+                }
             }
 
             function rightMove() {
-                boxLeft += 10;
+                boxLeft += 1;
                 boxEle.style.left = boxLeft + 'px';
             }
-            btnLeft.addEventListener("click", leftMove);
-            btnRight.addEventListener("click", rightMove);
+
+            function playRight() {
+                if (leftFlag) {
+                    clearInterval(mvTimer);
+                    leftFlag = false;
+                }
+                if (!rightFlag) {
+                    mvTimer = setInterval(rightMove, 20);
+                    rightFlag = true;
+                } else {
+                    stopMove();
+                }
+            }
+            btnLeft.addEventListener("click", playLeft);
+            btnRight.addEventListener("click", playRight);
         </script>
 </body>
 
