@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="아무거나 입력해보세요.">
+    <p id="displayText">당신이 입력한 것은: </p>
+
+    <script>
+        // 요소를 가져옴
+        const inputField = document.getElementById('inputField');
+        const displayText = document.getElementById('displayText');
+
+        // 입력 필드에 입력 이벤트를 설정함
+        inputField.addEventListener('input', function() {
+            displayText.innerHTML = "당신이 입력한 것은: " + inputField.value;
+        });
+    </script>
+    
+</body>
+</html>
