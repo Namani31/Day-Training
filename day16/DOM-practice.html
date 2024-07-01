@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Object Exmaple</title>
+</head>
+<body>
+    <div id="content">Hello, World!</div>
+    <button id="changeTextBtn">Change Text</button>
+
+    <script>
+        // DOM 객체를 가져옴
+        const contentDiv = document.getElementById('content');
+
+        // 객체의 내용 변경
+        // innerHTML: 태그 안에 위치한 값들을 가져옴
+        contentDiv.innerHTML = "Hello, DOM!";
+    </script>
+</body>
+</html>
