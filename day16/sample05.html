@@ -24,6 +24,7 @@
     </div>
     <script>
         // 이벤트와 핸들러 연결 1방식
+        // 단점: 이벤트 1개라면 핸들러 1개 적용 가능, 런타임중에 변경 불가
         function doClick1() {
             alert('예약1');
         }
@@ -35,11 +36,18 @@
         }
 
         // 이벤트와 핸들러 연결 3방식
+        /*
+            장점: 이벤트 1개로 핸들러 여러개 적용 가능, 런타임 중에 변경 불가
+            단점: 복잡함, 예전 브라우저에서 동작 불가 (IE8)
+        */
         const btn3 = document.getElementById("reservation3");
         btn3.addEventListener('click', function() {
             alert('예약3');
         });
 
+        btn3.addEventListener('click', function() {
+            btn3.textContent = "예약 3 버튼이 눌렸습니다.";
+        })
     </script>
 </body>
 </html>
