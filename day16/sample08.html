@@ -14,13 +14,11 @@
             color: white;
             text-align: center;
             border: none;
-
         }
 
         #box {
             position: absolute;
             left: 0px;
-            right: 0px;
             top: 200px;
             width: 50px;
             height: 50px;
@@ -33,63 +31,105 @@
 <body>
     <button type="button" id="left">←</button>
     <button type="button" id="right">→</button>
-    <div id="box">
-        <script>
-            const btnLeft = document.querySelector('#left');
-            const btnRight = document.querySelector('#right');
-            let boxEle = document.querySelector("#box");
-            let boxLeft = 0;
-            let boxRight = 0;
-            let mvTimer;
-            let leftFlag = false;
-            let rightFlag = false;
-            let upFlag = false;
-            let downFlag = false;
+    <button type="button" id="up">↑</button>
+    <button type="button" id="down">↓</button>
+    <div id="box"></div>
 
-            function stopMove() {
-                clearInterval(mvTimer);
-                leftFlag = false;
-                rightFlag = false;
-            }
+    <script>
+        const btnLeft = document.querySelector('#left');
+        const btnRight = document.querySelector('#right');
+        const btnUp = document.querySelector('#up');
+        const btnDown = document.querySelector('#down');
+        let boxEle = document.querySelector('#box');
+        let boxLeft = 0;
+        let boxTop = 200;
+        let mvTimer;
+        let leftFlag = false;
+        let rightFlag = false;
+        let upFlag = false;
+        let downFlag = false;
 
-            function leftMove() {
-                boxLeft -= 1;
-                boxEle.style.left = boxLeft + 'px';
-            }
+        function stopMove() {
+            clearInterval(mvTimer);
+            leftFlag = false;
+            rightFlag = false;
+            upFlag = false;
+            downFlag = false;
+        }
 
-            function playLeft() {
-                if (rightFlag) {
-                    clearInterval(mvTimer);
-                    rightFlag = false;
-                }
-                if (!leftFlag) {
-                    mvTimer = setInterval(leftMove, 20);
-                    leftFlag = true;
-                } else {
-                    stopMove();
-                }
-            }
+        function leftMove() {
+            boxLeft -= 1;
+            boxEle.style.left = boxLeft + 'px';
+        }
 
-            function rightMove() {
-                boxLeft += 1;
-                boxEle.style.left = boxLeft + 'px';
+        function playLeft() {
+            if (rightFlag || upFlag || downFlag) {
+                stopMove();
             }
+            if (!leftFlag) {
+                mvTimer = setInterval(leftMove, 20);
+                leftFlag = true;
+            } else {
+                stopMove();
+            }
+        }
 
-            function playRight() {
-                if (leftFlag) {
-                    clearInterval(mvTimer);
-                    leftFlag = false;
-                }
-                if (!rightFlag) {
-                    mvTimer = setInterval(rightMove, 20);
-                    rightFlag = true;
-                } else {
-                    stopMove();
-                }
+        function rightMove() {
+            boxLeft += 1;
+            boxEle.style.left = boxLeft + 'px';
+        }
+
+        function playRight() {
+            if (leftFlag || upFlag || downFlag) {
+                stopMove();
             }
-            btnLeft.addEventListener("click", playLeft);
-            btnRight.addEventListener("click", playRight);
-        </script>
+            if (!rightFlag) {
+                mvTimer = setInterval(rightMove, 20);
+                rightFlag = true;
+            } else {
+                stopMove();
+            }
+        }
+
+        function upMove() {
+            boxTop -= 1;
+            boxEle.style.top = boxTop + 'px';
+        }
+
+        function playUp() {
+            if (downFlag || leftFlag || rightFlag) {
+                stopMove();
+            }
+            if (!upFlag) {
+                mvTimer = setInterval(upMove, 20);
+                upFlag = true;
+            } else {
+                stopMove();
+            }
+        }
+
+        function downMove() {
+            boxTop += 1;
+            boxEle.style.top = boxTop + 'px';
+        }
+
+        function playDown() {
+            if (upFlag || leftFlag || rightFlag) {
+                stopMove();
+            }
+            if (!downFlag || upFlag) {
+                mvTimer = setInterval(downMove, 20);
+                downFlag = true;
+            } else {
+                stopMove();
+            }
+        }
+
+        btnLeft.addEventListener('click', playLeft);
+        btnRight.addEventListener('click', playRight);
+        btnUp.addEventListener('click', playUp);
+        btnDown.addEventListener('click', playDown);
+    </script>
 </body>
 
 </html>
