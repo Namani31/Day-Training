@@ -40,15 +40,33 @@
         //HTML 요소생성하기
         //01. 삽입할 요소찾기
         const mainEle = document.getElementById("content");
+
+        // div 요소 노드 만들기
         const divEle = document.createElement("div");
+
+        // 클래스 이름 추가하기
         divEle.classList.add("container");
+
+        // p 요소 노드 만들기
         const pEle = document.createElement("p");
         pEle.textContent = "새문장입니다.";
+
+        // a요소 노드 만들기
         const aEle = document.createElement("a");
+
+        // href 속성 추가하기
         aEle.setAttribute("href", "https://www.naver.com");
+
+        // text 노드 추가
         aEle.textContent = "네이버로 이동";
+
+        // 컨테이너에 p 요소 추가
         divEle.appendChild(pEle);
+
+        // 컨테이너에 a 요소 추가
         divEle.appendChild(aEle);
+
+        // 메인에 컨테이너 추가
         mainEle.appendChild(divEle);
     </script>
 </body>
