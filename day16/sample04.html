@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지생성하기</title>
+</head>
+
+<body>
+    <div>
+        <!-- <img src="images/color_1.png">
+        <img src="images/color_2.png">
+        <img src="images/color_3.png">
+        <img src="images/color_4.png">
+        <img src="images/color_5.png">
+        <img src="images/color_6.png"> -->
+    </div>
+    <script>
+        /*
+            1. 사용할 DOM 객체 생성
+            2. 반복적으로 작업하기 위해 for문 생성
+            3. for문 안에 요소 노드 생성
+            4. 생성된 요소의 속성 노드 src의 값은 반복문의 i 값을 적용해 완성
+            5. 생성된 요소 노드를 현재 HTML DOM에 추가
+        */
+        var divDom = document.querySelector("div");
+
+        for (let i = 1; i <= 6; i++) {
+            var IMG = document.createElement("img");
+            IMG.setAttribute("src", `images/color_${i}.png`);
+            divDom.append(IMG);
+        }
+    </script>
+</body>
