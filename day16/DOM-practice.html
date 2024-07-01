@@ -12,10 +12,12 @@
     <script>
         // DOM 객체를 가져옴
         const contentDiv = document.getElementById('content');
+        const changeTextBtn = document.getElementById('changeTextBtn');
 
-        // 객체의 내용 변경
-        // innerHTML: 태그 안에 위치한 값들을 가져옴
-        contentDiv.innerHTML = "Hello, DOM!";
+        changeTextBtn.addEventListener('click', function() {
+            // 객체의 내용 변경
+            contentDiv.innerHTML = "Hello, DOM!";
+        });
     </script>
 </body>
 </html>
