@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <button id="btn01">button</button>
+    <div id="container">
+        <nav>
+            <ul class="list">
+                <li id="first">One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        $('#btn01').click(function() {
+            $('#first').next('li').css({
+                'background-color' : '#9AB92E',
+                
+            })
+        });
+    </script>
+</body>
+</html>
