@@ -18,10 +18,14 @@
 <script>
     $(  
         function(){
+            
             $('#btn_01').click(
                 function(){
+                    // title 속성이 a로 시작되는 요소의 폰트컬러를 붉은색으로
                     $('li[title^="a"]').css('color','red');
+                    // title의 값이 bb인 경우 배경을 노란색으로
                     $('li[title!="bb"]').css('background-color','yellow');
+                    // title=bb이고 클래스가 s로 시작되면 배경을 녹색으로
                     $('[title="bb"][class^="s"]').css('background-color','green');
                 }
             );
