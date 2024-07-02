@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,19 +14,23 @@
             background-color: black;
             text-align: center;
         }
-        div > ul {
+
+        div>ul {
             list-style: none;
             overflow: hidden;
         }
+
         li {
             float: left;
             margin-right: 15px;
             text-align: center;
         }
+
         img {
             border: 10px solid yellowgreen
         }
-        div > p > button {
+
+        div>p>button {
             width: 130px;
             background-color: #069;
             color: white;
@@ -36,6 +41,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="box">
         <ul>
@@ -45,9 +51,25 @@
             <li><img src="images/pic4.jpg" alt="이미지04"></li>
         </ul>
         <p>
-            <button id="left"> <<< </button>
-            <button id="right"> >>> </button>
+            <button id="left">
+                <<< </button> <button id="right"> >>>
+            </button>
         </p>
     </div>
+    <script>
+        $(function(){
+            $('#left').click(
+                function(){
+                    $('ul>li:first-child').appendTo('ul');
+                }
+            );
+            $('#right').click(
+                function(){
+                    $('ul>li:last-child').prependTo('ul');
+                }
+            );
+        });
+    </script>
 </body>
+
 </html>
