@@ -57,12 +57,21 @@
     </div>
 
     <script>
-        // 큰집 손자 1 클릭 -> 작은집막내 굵은 글씨 처리
+        
         $(function() {
-            $('#big_son1').click(
+            // 큰집 손자 1 클릭 -> 작은집막내 굵은 글씨 처리
+            // $('#big_son1').click(
+            //     function() {
+            //     $(this).parent().next().children().last().css('font-weight', 'bold');
+            // });
+
+            // 자식 요소의 배경과 자식 요소를 색칠하기
+            $('#grandfather').click(
                 function() {
-                $(this).parent().next().children().last().css('font-weight', 'bold');
-            });
+                    $(this).children().next().css('background-color', 'yellow');
+                    $(this).children().next().children().css('background-color', 'blue');
+                }
+            )
         })
     </script>
 </body>
