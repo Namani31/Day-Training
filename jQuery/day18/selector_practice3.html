@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <p class="btn">
+            <button id="btn01">이미지 가져오기</button>
+        </p>
+        <p class="box01">
+            <img id="img" src="images/pic1.jpg" alt="sample"></p>
+        <p class="test">1</p>
+    </section>
+
+    <!-- 사진들 가져와서 버튼 누르면 다음 사진으로 넘어가게 하기 -->
+    <script>
+        $(function () {
+            var index = 1;
+            $('#btn01').click(function () {
+                if (index < 7) {
+                    index++;
+                    var imgName = 'images/pic' + index + '.jpg';
+                    $('p.box01 > img').attr('src', imgName);
+                    $('p.test').text(index);
+                } else {
+                    index = 1;
+                    $('p.box01 > img').attr('src', 'images/pic1.jpg');
+                    $('p.test').text(1);
+                }
+            });
+        });
+    </script>
+
+    <!-- 1초마다 자동으로 사진 넘어가기 -->
+    <script>
+        $(function () {
+            var index = 1;
+            setInterval(function () {
+                var localSrc = "images/pic";
+                if (index <= 6) {
+                    index++;
+                    $('#img').attr('src', localSrc + index + '.jpg');
+                    $('p.test').text(index);
+                } else {
+                    index = 1;
+                    $('#img').attr('src', 'images/pic1.jpg');
+                    $('p.test').text(1);
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
