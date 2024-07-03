@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery 부모, 자식, 형제 요소 이동 예제</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <style>
         .lv01 {
             width: 500px;
@@ -46,16 +46,22 @@
             <div class="lv03 son02" id="small_son1">작은집 손자4</div>
         </div>
     </div>
-    
     <script>
-        $(function() {
-            // 앞 뒤로 이동
-            $('#big_son2').click(
-                function() {
-                    $(this).next().css('background-color', 'red');
-                }
+        $(function(){
+            //앞뒤로 이동
+            // $('#big_son3').click(
+            //     function(){
+            //         $(this).first().css('background-color','red');
+            //     }
+            // );
+            
+            //자식이동
+            $('#big_father').click(
+                 function(){
+                    $(this).children().last().css('background-color','red');
+                 }
             );
-        })
+        });
     </script>
 </body>
 </html>
