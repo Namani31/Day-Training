@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul id="btn">
+        <li><a href="img/house_01.jpg" id="btn01">주택1</li></a>
+        <li><a href="img/house_02.jpg" id="btn02">주택2</li></a>
+        <li><a href="img/house_03.jpg" id="btn03">주택3</li></a>
+        <li><a href="img/house_04.jpg" id="btn04">주택4</li></a>
+    </ul>
+    <p><img src="img/house_05.jpg" alt="주택5" id="back_img"></p>
+    <script>
+        $(function () {
+            $('li>a').click(function () {
+                var pic = $(this).attr('href');
+                $('p>img').attr('src', pic);
+                return false;
+            })
+        });
+    </script>
+</body>
+
+</html>
