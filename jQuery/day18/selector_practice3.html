@@ -14,7 +14,7 @@
             <button id="btn01">이미지 가져오기</button>
         </p>
         <p class="box01">
-            <img id="img" src="images/pic1.jpg" alt="sample"></p>
+            <img id="img" src="images/run1.png" alt="sample"></p>
         <p class="test">1</p>
     </section>
 
@@ -23,16 +23,14 @@
         $(function () {
             var index = 1;
             $('#btn01').click(function () {
-                if (index < 7) {
+                var imgName = 'images/run' + index + '.png';
+                if (index <= 14) {
                     index++;
-                    var imgName = 'images/pic' + index + '.jpg';
-                    $('p.box01 > img').attr('src', imgName);
-                    $('p.test').text(index);
                 } else {
                     index = 1;
-                    $('p.box01 > img').attr('src', 'images/pic1.jpg');
-                    $('p.test').text(1);
                 }
+                $('p.box01 > img').attr('src', imgName);
+                $('p.test').text(index);
             });
         });
     </script>
@@ -42,17 +40,15 @@
         $(function () {
             var index = 1;
             setInterval(function () {
-                var localSrc = "images/pic";
-                if (index <= 6) {
+                var localSrc = "images/run";
+                if (index <= 14) {
                     index++;
-                    $('#img').attr('src', localSrc + index + '.jpg');
-                    $('p.test').text(index);
                 } else {
                     index = 1;
-                    $('#img').attr('src', 'images/pic1.jpg');
-                    $('p.test').text(1);
                 }
-            }, 1000);
+                $('#img').attr('src', localSrc + index + '.png');
+                $('p.test').text(index);
+            }, 100);
         });
     </script>
 </body>
