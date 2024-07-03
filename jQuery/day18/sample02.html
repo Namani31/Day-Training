@@ -45,10 +45,16 @@
                 $('p.no04').empty();
             });
 
+            // clone, 6번을 추가해서 1번 앞에 둠, ctrl+c, v 와 같은 느낌
             $('#btn05').click(function() {
+                let temp = $('p.no06').clone();
+                $('p.no01').prepend(temp);
             });
-
+            
+            // detach, ctrl+x, v 와 같은 느낌
             $('#btn06').click(function() {
+                let temp = $('p.no07').detach();
+                $('p.no01').prepend(temp);
             });
         })
     </script>
