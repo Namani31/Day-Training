@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <button id="btn01">button</button>
+    <div id="container">
+        <p>안녕하셨어요</p>
+    </div>
+
+    <script>
+        $(function () {
+            $('#btn01').click(function (){
+                $('#container').append('<p>반갑습니다.</p>')
+            });
+        });
+    </script>
+</body>
+
+</html>
