@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,6 +41,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="lv01" id="grandfather">
         <div class="lv02 son01" id="big_father">
@@ -57,8 +59,7 @@
     </div>
 
     <script>
-        
-        $(function() {
+        $(function () {
             // 큰집 손자 1 클릭 -> 작은집막내 굵은 글씨 처리
             // $('#big_son1').click(
             //     function() {
@@ -66,13 +67,22 @@
             // });
 
             // 자식 요소의 배경과 자식 요소를 색칠하기
+            // $('#grandfather').click(
+            //     function() {
+            //         $(this).children().next().css('background-color', 'yellow');
+            //         $(this).children().next().children().css('background-color', 'blue');
+            //     }
+            // )
+
+            // 자식 요소들의 배경만 변경하기
             $('#grandfather').click(
-                function() {
-                    $(this).children().next().css('background-color', 'yellow');
-                    $(this).children().next().children().css('background-color', 'blue');
+                function () {
+                    $(this).children().children().css('background-color', 'yellow');
+                    $(this).children().next().children().css('background-color', 'red');
                 }
             )
         })
     </script>
 </body>
+
 </html>
