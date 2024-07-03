@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <button id="btn02">button</button>
+    <div id="container2">
+        <p>안녕하셨어요</p>
+    </div>
+
+    <script>
+        $(function () {
+            $('#btn02').click(function (){
+                $('#container2').prepend('<p>오랜만입니다.</p>')
+            });
+        });
+    </script>
+</body>
+
+</html>
