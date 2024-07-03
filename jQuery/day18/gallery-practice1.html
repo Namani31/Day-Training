@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 큰 이미지-->
+    <div id="wrap">
+        <div id="bigImage">
+            <img src="pic/flw_01.jpg" alt="이미지01" width="800px">
+        </div>
+        <!-- 작은 이미지 목록 -->
+        <div id="all">
+            <p id="prev"><img src="pic/prev.png" width="23" height="23"></p>
+            <p id="next"><img src="pic/next.png" width="23" height="23"></p>
+            <div id="show_view">
+                <ul>
+                    <li><a href="pic/flw_01.jpg" class="smallImage">
+                            <img src="pic/flw_01.jpg"></a></li>
+
+                    <li><a href="pic/flw_02.jpg" class="smallImage">
+                            <img src="pic/flw_02.jpg"></a></li>
+
+                    <li><a href="pic/flw_03.jpg" class="smallImage">
+                            <img src="pic/flw_03.jpg"></a></li>
+
+                    <li><a href="pic/flw_04.jpg" class="smallImage">
+                            <img src="pic/flw_04.jpg"></a></li>
+
+                    <li><a href="pic/flw_05.jpg" class="smallImage">
+                            <img src="pic/flw_05.jpg"></a></li>
+                </ul>
+            </div> <!-- /show_view -->
+        </div> <!-- /all -->
+    </div> <!-- /wrap -->
+
+    <script>
+        $(function () {
+            // 버튼 클릭 시 마지막 li 요소가 ul 요소의 첫 번째 요소로 이동함
+            $('p#prev').click(function () {
+                $('div#show_view ul>li:last').prependTo('div#show_view ul');
+            });
+
+            // 버튼 클릭 시 첫 번째 li 요소가 ul 요소의 마지막 요소로 이동함
+            $('p#next').click(function () {
+                $('div#show_view ul>li:first').appendTo('div#show_view ul');
+            });
+            // a 요소 클릭 시 클릭한 a 요소의 href 값을 가져와 아이디 bigImage의 자식인 img 요소의 src 값으로 변경하여 큰 이미지를 변경한다
+            $('div#show_view li>a').click(function () {
+                $('div#bigImage>img').attr('src', $(this).attr('href'));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>
