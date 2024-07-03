@@ -17,7 +17,7 @@
     <button id="btn06">detach</button>
     <p class="no01">no01 요소바꾸기</p>
     <p class="no02">no02 내용바꾸기</p>
-    <p class="no03">no03 없애기</p>
+    <p class="no03">no03 없애기</p> 
     <p class="no04">no04 비우기</p>
     <p class="no05">no05 채우기</p>
     <p class="no06">no06 복제하기</p>
@@ -25,19 +25,24 @@
 
     <script>
         $(function() {
-            // replace
+            // replace, h2로 속성이 바뀌고 내용도 바뀜
             $('#btn01').click(function() {
                 $('p.no01').replaceWith("<h2>replace 변환</h2>");
             });
 
+            // <h2>html 변환</h2>처럼 내용이 생겨남
             $('#btn02').click(function() {
                 $('p.no02').html("<h2>html 변환</h2>");
             });
 
+            // 내용이 아니라 선택된 요소가 통째로 사라짐
             $('#btn03').click(function() {
+                $('p.no03').remove();
             });
 
+            // 틀은 남아있고 내용만 지워짐
             $('#btn04').click(function() {
+                $('p.no04').empty();
             });
 
             $('#btn05').click(function() {
