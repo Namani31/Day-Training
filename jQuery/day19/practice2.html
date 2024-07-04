@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        dl {
+            border: 1px solid black;
+        }
+
+        dl > dt {
+            border: 2px solid red;
+            cursor: pointer;
+        }
+
+        dl > dd {
+            border: 2px solid blue;
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <dl>
+        <dt>타이틀01</dt>
+        <dd>LForem ipsum dolor sit amet consectetur, adipisicing elit. Quod, sint. Commodi doloribus omnis nulla labore.
+            Minus, quam hic nobis quasi laborum libero quia quibusdam exercitationem corporis quos odio? Praesentium,
+            voluptatem.
+        </dd>
+        <dt>타이틀02</dt>
+        <dd>LForem ipsum dolor sit amet consectetur, adipisicing elit. Quod, sint. Commodi doloribus omnis nulla labore.
+            Minus, quam hic nobis quasi laborum libero quia quibusdam exercitationem corporis quos odio? Praesentium,
+            voluptatem.
+        </dd>
+        <dt>타이틀03</dt>
+        <dd>LForem ipsum dolor sit amet consectetur, adipisicing elit. Quod, sint. Commodi doloribus omnis nulla labore.
+            Minus, quam hic nobis quasi laborum libero quia quibusdam exercitationem corporis quos odio? Praesentium,
+            voluptatem.
+        </dd>
+    </dl>
+    <script>
+        $(function () {
+            $('dl>dt').on('click', function() {
+                var displaySrc = $(this).next('dd').css('display');
+                if (displaySrc == 'none') {
+                    $('dl>dd').slideUp(300);
+                    $(this).next('dd').slideDown(300);
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
