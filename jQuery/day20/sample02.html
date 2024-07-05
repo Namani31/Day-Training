@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="text">
+    <p></p>
+    <script>
+        $(function () {
+            $(':input').on('keyup', function (e) {
+                let str = $(this).val();
+                console.log(str);
+                $('p').text(str);
+            })
+
+            $(':input').on('change', function (e) {
+                let str = $(this).val();
+                console.log(str);
+                $('body').append('<p>' + str + '</p');
+            })
+        });
+    </script>
+</body>
+
+</html>
