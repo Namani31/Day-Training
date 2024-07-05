@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.min.js"></script>
+</head>
+<body>
+    <button id="btn01">버튼1</button>
+    <button id="btn02">버튼2</button>
+    <h1>메인창</h1>
+    <div>
+        <iframe src="https://www.daum.net" width="600" height="400"></iframe>
+    </div>
+    <script>
+        $(function(){
+            $('#btn01').on('click',function(){
+                $('iframe').attr('src','https://ysedu.or.kr');
+            });
+            $('#btn02').on('click',function(){
+                $('iframe').attr('src','https://www.daum.net');
+            });
+        });
+    </script>
+</body>
+</html>
