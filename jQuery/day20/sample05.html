@@ -9,6 +9,7 @@
 <body>
     <button id="btn01">버튼1</button>
     <button id="btn02">버튼2</button>
+    <button id="btn03">버튼3</button>
     <h1>메인창</h1>
     <div>
         <iframe src="https://www.daum.net" width="600" height="400"></iframe>
@@ -20,6 +21,9 @@
             });
             $('#btn02').on('click',function(){
                 $('iframe').attr('src','https://www.daum.net');
+            });
+            $('#btn03').on('click',function(){
+                $('iframe').attr('src','child.html?data1=1&data2=10&callback=show');
             });
         });
     </script>
