@@ -29,24 +29,21 @@
             $(':input').on('change', function (e) {
                 let str = $(this).val();
                 if ($(this).hasClass('korean')) {
-                    if (!isHangeul(str)) {
-                        alert('한글만 입력하세요');
-                        $(this).val('');
-                    } else {
-                        console.log(str);
-                        $('body').append('<p>' + str + '</p>');
-                    }
-                    
+                    validateInput(str, isHangeul, '한글만 입력하세요');
                 } else if ($(this).hasClass('english')) {
-                    if (!isEnglish(str)) {
-                        alert('영문만 입력하세요');
-                        $(this).val('');
-                    } else {
-                        console.log(str);
-                        $('body').append('<p>' + str + '</p>');
-                    }
+                    validateInput(str, isEnglish, '영문만 입력하세요');
                 }
             });
+
+            function validateInput(input, validationFn, errorMsg) {
+                if (!validationFn(input)) {
+                    alert(errorMsg);
+                    $(':input').val('');
+                } else {
+                    console.log(input);
+                    $('body').append('<p>' + input + '</p>');
+                }
+            }
 
             function isHangeul(input) {
                 // 정규 표현식을 사용하여 한글만 포함되어 있는지 확인
