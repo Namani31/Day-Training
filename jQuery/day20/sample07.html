@@ -17,11 +17,21 @@
         });
 
         function getData() {
-            $.get("testdata.txt", successFn);
+            $.get("testdata.txt", successFn)
+                .fail(erroFn)
+                .always(completeFn);
         }
 
         function successFn(result) {
             $('#main').append(result + "<br>");
+        }
+
+        function erroFn(xhr, status, strErr) {
+            $('#main').append("<br>" + strErr + "<br>");
+        }
+
+        function completeFn() {
+            $('#main').append("=>작업이 완료됨.<br>");
         }
     </script>
 </body>
