@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.min.js"></script>
+    <style>
+        span {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>이름 (한글):<input type="text" name="" id=""><span>한글로 입력하세요</span></p>
+    <p>이름 (영문):<input type="text" name="" id=""><span>영문으로 입력하세요</span></p>
+
+    <script>
+        $(function() {
+            $('input').on('focus', function() {
+                $(this).next('span')
+                    .css('display', 'inline')
+                    .delay(800)
+                    .fadeOut(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
