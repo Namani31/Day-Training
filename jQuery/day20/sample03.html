@@ -19,11 +19,12 @@
 
     <script>
         $(function () {
+            // 입력 상자가 포커스를 받으면 실행
             $('input').on('focus', function () {
-                $(this).next('span')
-                    .css('display', 'inline')
-                    .delay(800)
-                    .fadeOut(1000);
+                $(this).next('span')    // 입력 상자 다음에 오는 span 요소 선택하기
+                    .css('display', 'inline')   // 스타일 속성으로 보이기 
+                    .delay(800) // 0.8초 대기
+                    .fadeOut(1000); // 1초동안 서서히 사라지기
             });
 
             $(':input').on('change', function (e) {

@@ -19,9 +19,12 @@
                 $('p').text(str);
             })
 
+            // 입력값이 바뀌면
             $(':input').on('change', function (e) {
                 let str = $(this).val();
+                // 이메일 형식 체크
                 if (isNumeric(str)) {
+                    // 성공하면 로그 남기고 p 요소 추가
                     console.log(str);
                     $('body').append('<p>' + str + '</p')
                 } else {
