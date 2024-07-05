@@ -14,17 +14,51 @@
 </head>
 
 <body>
-    <p>이름 (한글):<input type="text" name="" id=""><span>한글로 입력하세요</span></p>
-    <p>이름 (영문):<input type="text" name="" id=""><span>영문으로 입력하세요</span></p>
+    <p>이름 (한글):<input type="text" class="korean" id=""><span>한글로 입력하세요</span></p>
+    <p>이름 (영문):<input type="text" class="english" id=""><span>영문으로 입력하세요</span></p>
 
     <script>
-        $(function() {
-            $('input').on('focus', function() {
+        $(function () {
+            $('input').on('focus', function () {
                 $(this).next('span')
                     .css('display', 'inline')
                     .delay(800)
                     .fadeOut(1000);
             });
+
+            $(':input').on('change', function (e) {
+                let str = $(this).val();
+                if ($(this).hasClass('korean')) {
+                    if (!isHangeul(str)) {
+                        alert('한글만 입력하세요');
+                        $(this).val('');
+                    } else {
+                        console.log(str);
+                        $('body').append('<p>' + str + '</p>');
+                    }
+                    
+                } else if ($(this).hasClass('english')) {
+                    if (!isEnglish(str)) {
+                        alert('영문만 입력하세요');
+                        $(this).val('');
+                    } else {
+                        console.log(str);
+                        $('body').append('<p>' + str + '</p>');
+                    }
+                }
+            });
+
+            function isHangeul(input) {
+                // 정규 표현식을 사용하여 한글만 포함되어 있는지 확인
+                const hanGeul = /^[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]+$/;
+                return hanGeul.test(input);
+            }
+
+            function isEnglish(input) {
+                // 정규 표현식을 사용하여 영어만 포함되어 있는지 확인
+                const english = /^[a-zA-Z]+$/;
+                return english.test(input);
+            }
         });
     </script>
 </body>
