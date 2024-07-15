@@ -100,11 +100,15 @@
         console.log(`${a} + ${b} = ${func(a, b)}`);
 
         // 무명 함수를 변수로 받아서 사용
-        let plus = function(a, b) {return a + b};
+        let plus = function (a, b) {
+            return a + b
+        };
         console.log(`${a} + ${b} = ${func(a, b)}`);
 
         // 람다식1
-        let add1 = (a, b) => {return a + b};
+        let add1 = (a, b) => {
+            return a + b
+        };
         console.log(`${a} + ${b} = ${add1(a, b)}`);
 
         // 람다식2 (return 제거)
@@ -114,25 +118,46 @@
         // 람다식3 (return 제거 + 객체)
         let name = "홍길동";
         let age = 24;
-        let add3 = (_name, _age) => (
-            {
-                name: _name,
-                age: _age,
-            }
-        );
+        let add3 = (_name, _age) => ({
+            name: _name,
+            age: _age,
+        });
         console.log(`람다식(객체) ${JSON.stringify(add3(name, age))}`);
 
         // 람다식4 (return 제거 + 객체)
-        const add4 = (name, age) => (
-            {
-                name,
-                age,
-            }
-        );
+        const add4 = (name, age) => ({
+            name,
+            age,
+        });
         console.log(`람다식(객체) ${JSON.stringify(add4(name, age))}`);
     </script>
 
-    <script></script>
+    <script>
+        // 8. 분할대입 {} []
+        // 일반적인 방법
+        const myProfile = {
+            name: "홍길동",
+            // age: 24,
+            sex: '남',
+        };
+        const message = `내 이름은 ${myProfile.name} 나이는 ${myProfile.age}살입니다.`;
+        console.log(message);
+
+        // 분할대입법
+        // const{age,name} = myProfile;
+        // name = '강감찬';
+        // const{age} = myProfile;
+
+        // const message2 = `내 이름은 ${myProfile} 나이는 ${myProfile}살입니다.`;
+        // console.log(message2);
+
+        const {
+            age: _age,
+            name: _name
+        } = myProfile;
+        const message3 = `내 이름은 ${myProfile.name} 나이는 ${myProfile.age}살입니다.`;
+        console.log(message3);
+    </script>
 </body>
 
 </html>
