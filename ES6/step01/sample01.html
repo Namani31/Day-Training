@@ -217,6 +217,20 @@
         const arr5 = [30, 40];
         const arr6 = [...arr4, ...arr5];
         console.log(arr6); // [10, 20, 30, 40];
+
+        // 얕은 복사, 깊은 복사
+        const arr7 = arr4;
+        console.log('arr4 =>', arr4);
+        console.log('arr7 =>', arr7);
+
+        arr7[0] = 99;
+        console.log('arr4 =>', arr4); // 10 20
+        console.log('arr7 =>', arr7); // 99 20
+
+        arr8 = [...arr4];
+        arr8[0] = 999; // 새로 배열을 만들었기 때문에 깊은 복사가 됨, 주소도 다른 번호를 받게 됨
+        console.log('arr4 =>', arr4); // 10 20
+        console.log('arr8 =>', arr8); // 99 20
     </script>
 </body>
 
