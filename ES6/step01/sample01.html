@@ -267,10 +267,10 @@
     <script>
         // 14.map 함수
         // 일반적인 방법
-        const aniArr = ['강아지', '망아지', '야옹이'];
-        for (let idx = 0; idx < aniArr.length; idx++) {
-            console.log(aniArr[idx]);
-        }
+        // const aniArr = ['강아지', '망아지', '야옹이'];
+        // for (let idx = 0; idx < aniArr.length; idx++) {
+        //     console.log(aniArr[idx]);
+        // }
 
         // map 함수 구조
         // 배열.map(요소를 순회해서 실행할 함수);
@@ -303,38 +303,49 @@
         // console.log(nameArr2);
 
         /////////////////////////////
-        const manArr = [
-            {name: '홍길동', age: 24},
-            {name: '강감찬', age: 74},
-            {name: '을지문덕', age: 44},
-            {name: '최홍만', age: 14},
-            {name: '세종대왕', age: 66},
-        ];
+        // const manArr = [
+        //     {name: '홍길동', age: 24},
+        //     {name: '강감찬', age: 74},
+        //     {name: '을지문덕', age: 44},
+        //     {name: '최홍만', age: 14},
+        //     {name: '세종대왕', age: 66},
+        // ];
 
 
 
-        // 요금: 1000원 미성년 10% 할인, 60세 이상 50% 할인
-        // 홍길동: 1000 , 강감찬: 500, 을지문덕: 1000 , 최홍만: 900, 세종대왕: 500
+        // // 요금: 1000원 미성년 10% 할인, 60세 이상 50% 할인
+        // // 홍길동: 1000 , 강감찬: 500, 을지문덕: 1000 , 최홍만: 900, 세종대왕: 500
 
-        // 키, 밸류 값으로 `name`과 `age` 주기
-        const resultArr = manArr.map(({name, age}) => {
-            // 나이가 19살보다 어리다면 미성년자
-            if(age < 19) {
-                // (1000 * 0.1)을 이용해 10% 할인값을 계산하고 그 값에 1000원을 뺌
-                return name + ':' + (1000 - (1000 * 0.1)) + '원';
-            // 나이가 60살 이상이라면
-            } else if (age > 60) {
-                // (1000 * 0.5)를 하여 50% 계산하고 1000원을 뺌
-                return name + ':' +  (1000 - (1000 * 0.5)) + '원';
-            // 미성년자도 아니고 노약자도 아니라면 1000원을 냄
-            } else {
-                return name + ':' + '1000원';
+        // // 키, 밸류 값으로 `name`과 `age` 주기
+        // const resultArr = manArr.map(({name, age}) => {
+        //     // 나이가 19살보다 어리다면 미성년자
+        //     if(age < 19) {
+        //         // (1000 * 0.1)을 이용해 10% 할인값을 계산하고 그 값에 1000원을 뺌
+        //         return name + ':' + (1000 - (1000 * 0.1)) + '원';
+        //     // 나이가 60살 이상이라면
+        //     } else if (age > 60) {
+        //         // (1000 * 0.5)를 하여 50% 계산하고 1000원을 뺌
+        //         return name + ':' +  (1000 - (1000 * 0.5)) + '원';
+        //     // 미성년자도 아니고 노약자도 아니라면 1000원을 냄
+        //     } else {
+        //         return name + ':' + '1000원';
+        //     }
+        // });
+
+        // console.log(resultArr);
+
+        const aniArr = ['강아지', '망아지', '야옹이', '어흥이', '거북이'];
+        // 홀수번째만 출력하기
+
+
+        const resultArr = aniArr.map((name, index) => {
+            // 배열은 0부터 시작하고, 홀수를 출력하라는 게 아닌 홀수'번째'를 출력하라고 했으므로 강아지가 첫 번째가 됨
+            if (index % 2 == 0) {
+                console.log(name);
             }
         });
 
         console.log(resultArr);
-
-        
     </script>
 </body>
 
