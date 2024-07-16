@@ -35,4 +35,4 @@ const mainEle = h1Ele.parentElement;
 console.log(mainEle);
 mainEle.removeChild(h1Ele);
 // mainEle.remove(); // 자기 자신 삭제
-mainEle.textContent = null;
+mainEle.innerHTML = '<p>안녕하세요</p>';
